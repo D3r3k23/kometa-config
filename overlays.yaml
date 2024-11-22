@@ -1,0 +1,52 @@
+templates:
+  resolution:
+    default:
+    - align: 10
+    overlay:
+      name: <<overlay_name>>
+      group: resolution
+      weight: <<weight>>
+      horizontal_align: left
+      horizontal_offset: <<align>>
+      vertical_align: top
+      vertical_offset: <<align>>
+  # audio:
+  #   default:
+  #   overlay:
+
+overlays:
+  # Resolution
+  4K-DV:
+    template: {name: resolution, weight: 100}
+    plex_search: {all: {resolution.regex: '(?i)2160|4K'}}
+    filters: {has_dolby_vision: true}
+  4K-HDR:
+    template: {name: resolution, weight: 90}
+    plex_search: {all: {resolution.regex: '(?i)2160|4K', hdr: true}}
+  4K:
+    template: {name: resolution, weight: 80}
+    plex_search: {any: {resolution.regex: '(?i)2160|4K'}}
+  1080P-DV:
+    template: {name: resolution, weight: 70}
+    plex_search: {all: {resolution.regex: '(?i)1080|2K'}}
+    filters: {has_dolby_vision: true}
+  1080P-HDR:
+    template: {name: resolution, weight: 60}
+    plex_search: {all: {resolution.regex: '(?i)1080|2K', hdr: true}}
+  1080P:
+    template: {name: resolution, weight: 50}
+    plex_search: {all: {resolution.regex: '(?i)1080|2K'}}
+  720P-DV:
+    template: {name: resolution, weight: 40}
+    plex_search: {all: {resolution.regex: '(?i)720|HD'}}
+    filters: {has_dolby_vision: true}
+  720P-HDR:
+    template: {name: resolution, weight: 30}
+    plex_search: {all: {resolution.regex: '(?i)720|HD', hdr: true}}
+  720P:
+    template: {name: resolution, weight: 20}
+    plex_search: {all: {resolution.regex: '(?i)720|HD'}}
+
+  # Audio
+  # TrueHD-Atmos:
+  # TrueHD:

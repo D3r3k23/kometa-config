@@ -1,0 +1,130 @@
+templates:
+  # Section 1 - Charts
+  basic_collection:
+    default:
+      sort_prefix: ""
+      order: custom
+    sort_title: "!01-<<sort_prefix>> <<collection_sort>>"
+    collection_order: <<order>>
+  imdb_chart:
+    default:
+      sort_prefix: ""
+      order: custom
+      type: top
+    imdb_chart: <<type>>_<<library_type>>s
+    collection_order: custom
+    sort_title: "!01-<<sort_prefix>> <<collection_sort>>"
+
+  # Section 2: Seasonal
+
+  # Section 3: Series
+  tmdb_collection:
+    default:
+      sort_title: <<collection_sort>>
+    optional:
+    - edition
+    move_prefix: The, A, An
+    tmdb_collection_details: <<id>>
+    sort_title: "!03 <<sort_title>>"
+    filters: {edition: <<edition>>}
+  trakt_collection:
+    default:
+      sort_title: <<collection_sort>>
+      order: release
+    optional:
+    - edition
+    move_prefix: The, A, An
+    trakt_list_details: https://trakt.tv/users/<<user>>/lists/<<list>>
+    collection_order: <<order>>
+    sort_title: "!03 <<sort_title>>"
+    filters: {edition: <<edition>>}
+
+  # Section 4: Categories
+  imdb_genre:
+    imdb_search:
+      type: <<type>>
+      genre.any: <<genre>>
+      limit: 4000
+    name: <<mapping_name>> Collection
+    item_genre: <<mapping_name>>
+    collection_order: custom
+    sort_title: "!04 <<collection_sort>>"
+  imdb_keyword:
+    imdb_search:
+      type: <<type>>
+      keyword.any: <<keyword>>
+      limit: 1000
+    name: <<mapping_name>> Collection
+    item_genre: <<mapping_name>>
+    collection_order: custom
+    sort_title: "!04 <<collection_sort>>"
+
+  # Section 5: People
+  actor:
+    move_prefix: The, A, An
+    tmdb_person: <<mapping_name>>
+    name: <<mapping_name>> Collection
+    sort_title: "!05 <<collection_sort>>"
+    collection_order: release.desc
+    plex_search:
+      all:
+        actor: tmdb
+      validate: false
+  director:
+    move_prefix: The, A, An
+    tmdb_person: <<id>>
+    name: <<mapping_name>> Collection
+    sort_title: "!05 <<collection_sort>>"
+    collection_order: release.desc
+    plex_search:
+      all:
+        director: tmdb
+      validate: false
+  writer:
+    move_prefix: The, A, An
+    tmdb_person: <<id>>
+    name: <<mapping_name>> Collection
+    sort_title: "!05 <<collection_sort>>"
+    collection_order: release.desc
+    plex_search:
+      all:
+        writer: tmdb
+      validate: false
+  producer:
+    move_prefix: The, A, An
+    tmdb_person: <<id>>
+    name: <<mapping_name>> Collection
+    sort_title: "!05 <<collection_sort>>"
+    collection_order: release.desc
+    plex_search:
+      all:
+        producer: tmdb
+      validate: false
+  actor_or_director:
+    move_prefix: The, A, An
+    tmdb_person: <<id>>
+    name: <<mapping_name>> Collection
+    sort_title: "!05 <<collection_sort>>"
+    collection_order: release.desc
+    plex_search:
+      any:
+        actor: tmdb
+        director: tmdb
+      validate: false
+  director_or_writer:
+    move_prefix: The, A, An
+    tmdb_person: <<id>>
+    name: <<mapping_name>> Collection
+    sort_title: "!05 <<collection_sort>>"
+    collection_order: release.desc
+    plex_search:
+      any:
+        director: tmdb
+        writer: tmdb
+      validate: false
+
+  # Section 6: Decades
+  decade:
+
+  # Section 7: Networks
+  network:
