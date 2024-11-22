@@ -96,31 +96,31 @@ collections:
     #   their sketch show has been referred to as being "an important moment in the evolution of television comedy".
 
   # James Bond
-  "James Bond Collection": {template: {name: tmdb_collection, id: 645}}
+  "James Bond Collection":      {template: {name: tmdb_collection, id: 645}}
   "James Bond: Daniel Craig":   {template: {name: trakt_collection, user: dinkysniff, list: collection-james-bond-daniel-craig}}
   "James Bond: Pierce Brosnan": {template: {name: trakt_collection, user: dinkysniff, list: collection-james-bond-pierce-brosnan}}
   "James Bond: Roger Moore":    {template: {name: trakt_collection, user: dinkysniff, list: collection-james-bond-roger-moore}}
   "James Bond: Sean Connery":   {template: {name: trakt_collection, user: dinkysniff, list: collection-james-bond-sean-connery}}
 
   # Middle Earth
-  "Middle Earth Collection": {template: {name: trakt_collection, user: yoru14, list: middle-earth}}
-  "The Hobbit Trilogy": {template: {name: tmdb_collection, id: 121938}}
-  "The Lord of the Rings Trilogy": {template: {name: tmdb_collection, id: 119}}
+  "Middle Earth Collection":                  {template: {name: trakt_collection, user: yoru14, list: middle-earth}}
+  "The Hobbit Trilogy":                       {template: {name: tmdb_collection, id: 121938}}
+  "The Lord of the Rings Trilogy":            {template: {name: tmdb_collection, id: 119}}
   "The Lord of the Rings: Extended Editions": {template: {name: tmdb_collection, id: 119, edition: Extended Edition}}
 
   # Star Trek
-  "Star Trek Collection": {template: {name: trakt_collection, sort_title: Star Trek 00, user: planetjimbo, list: star-trek-collection}}
+  "Star Trek Collection":           {template: {name: trakt_collection, sort_title: Star Trek 00, user: planetjimbo, list: star-trek-collection}}
   "Star Trek: The Original Series": {template: {name: tmdb_collection, sort_title: Star Trek 01, id: 151}}
   "Star Trek: The Next Generation": {template: {name: tmdb_collection, sort_title: Star Trek 02, id: 115570}}
   "Star Trek: The Kelvin Timeline": {template: {name: tmdb_collection, sort_title: Star Trek 03, id: 115575}}
 
   # Star Wars
-  "Star Wars Collection": {template: {name: trakt_collection, sort_title: Star Wars 00, user: silvol, list: star-wars}}
+  "Star Wars Collection":        {template: {name: trakt_collection, sort_title: Star Wars 00, user: silvol, list: star-wars}}
   "Star Wars: Original Trilogy": {template: {name: trakt_collection, sort_title: Star Wars 01, user: cheesecake_77, list: star-wars-original-trilogy}}
-  "Star Wars: Prequel Trilogy": {template: {name: trakt_collection, sort_title: Star Wars 02, user: cheesecake_77, list: star-wars-prequels}}
-  "Star Wars: Sequel Trilogy": {template: {name: trakt_collection, sort_title: Star Wars 03, user: cheesecake_77, list: star-wars-sequel-trilogy}}
-  "Star Wars: Despecialized": {template: {name: trakt_collection, sort_title: Star Wars 04, user: cheesecake_77, list: star-wars-original-trilogy, edition: Despecialized}}
-  "Star Wars: Project 4K":   {template: {name: trakt_collection, sort_title: Star Wars 05, user: cheesecake_77, list: star-wars-original-trilogy, edition: 4K}}
+  "Star Wars: Prequel Trilogy":  {template: {name: trakt_collection, sort_title: Star Wars 02, user: cheesecake_77, list: star-wars-prequels}}
+  "Star Wars: Sequel Trilogy":   {template: {name: trakt_collection, sort_title: Star Wars 03, user: cheesecake_77, list: star-wars-sequel-trilogy}}
+  "Star Wars: Despecialized":    {template: {name: trakt_collection, sort_title: Star Wars 04, user: cheesecake_77, list: star-wars-original-trilogy, edition: Despecialized}}
+  "Star Wars: Project 4K":       {template: {name: trakt_collection, sort_title: Star Wars 05, user: cheesecake_77, list: star-wars-original-trilogy, edition: 4K}}
 
 
   # Section 4: Categories
