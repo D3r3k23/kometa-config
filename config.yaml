@@ -7,8 +7,7 @@ libraries:
       asset_directory: /images/collections
 
     metadata_files: /metadata/movies.yaml
-    overlay_files:
-    - file: overlays.yaml
+    overlay_files: [file: overlays.yaml]
     settings:
       asset_directory: /images/movies
 
@@ -38,8 +37,7 @@ libraries:
       asset_directory: /images/collections
 
     metadata_files: /metadata/shows.yaml
-    overlay_files:
-    - file: overlays.yaml
+    overlay_files: [file: overlays.yaml]
     settings:
       asset_directory: /images/shows
 
