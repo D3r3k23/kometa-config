@@ -1,5 +1,9 @@
 collections:
   Collectionless:
     plex_collectionless:
+      exclude_prefix:
+      - "!"
+      - "~"
       exclude:
-      - IMDb Top 250
+      - Mad Max Collection
+      - Star Wars Collection

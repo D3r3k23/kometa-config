@@ -1,24 +1,29 @@
 libraries:
   Movies:
     collection_files:
-    - file: collections/common.yaml
+    - file: /kometa/collections/preroll.yaml
+    - file: /kometa/collections/common.yaml
       asset_directory: /images/collections
-    - file: collections/movies.yaml
+    - file: /kometa/collections/movies.yaml
       asset_directory: /images/collections
 
     metadata_files: /metadata/movies.yaml
-    overlay_files: [file: overlays.yaml]
+    overlay_files:
+    - file: /kometa/overlays.yaml
+
+    report_path: /kometa/reports/movies_report.yaml
     settings:
       asset_directory: /images/movies
 
     operations:
       assets_for_all: true
+      mass_studio_update: tmdb
       mass_originally_available_update: tmdb
       # Genres
       mass_genre_update: imdb
-      # mass_genre_update: reset
       genre_mapper:
         "Film-Noir": ""
+        "Music": ""
         "Sci-Fi": Science Fiction
         "Sport": Sports
       # Ratings
@@ -31,22 +36,29 @@ libraries:
 
   Shows:
     collection_files:
-    - file: collections/common.yaml
+    - file: /kometa/collections/common.yaml
       asset_directory: /images/collections
-    - file: collections/shows.yaml
+    - file: /kometa/collections/shows.yaml
       asset_directory: /images/collections
 
     metadata_files: /metadata/shows.yaml
-    overlay_files: [file: overlays.yaml]
+    overlay_files:
+    - file: /kometa/overlays.yaml
+    - file: /kometa/overlays.yaml
+      template_variables: {level: season}
+    - file: /kometa/overlays.yaml
+      template_variables: {level: episode}
+
+    report_path: /kometa/reports/shows_report.yaml
     settings:
       asset_directory: /images/shows
 
     operations:
       assets_for_all: true
+      mass_studio_update: tmdb
       mass_originally_available_update: tmdb
       # Genres
       mass_genre_update: [tvdb, tmdb]
-      # mass_genre_update: reset
       genre_mapper:
         "Children": Family
         "Game-Show": Game Show
@@ -72,7 +84,7 @@ libraries:
         episodes: true
 
 playlist_files:
-- file: playlists.yaml
+- file: /kometa/playlists.yaml
   asset_directory: /images/playlists
 
 settings:
@@ -87,7 +99,6 @@ settings:
   cache_expiration: 60
 
   # Assets
-  asset_directory: assets
   asset_folders: true
   asset_depth: 2
   create_asset_folders: true
@@ -98,11 +109,13 @@ settings:
   show_missing_episode_assets: true
   show_asset_not_needed: false
 
+  # Collections
   sync_mode: sync
   minimum_items: 1
   default_collection_order: release
   delete_below_minimum: true
   delete_not_scheduled: false
+
   run_again_delay: 2
   missing_only_released: true
 

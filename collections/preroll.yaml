@@ -1,0 +1,8 @@
+templates:
+  preroll:
+    server_preroll: /prerolls/<<collection_name>>
+    build_collection: false
+    schedule: <<schedule>>
+
+collections:
+  "preroll.mp4": {template: {name: preroll, schedule: daily}}

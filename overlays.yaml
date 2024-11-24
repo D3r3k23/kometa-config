@@ -1,52 +1,93 @@
 templates:
   resolution:
     default:
-    - align: 10
+      align: 10
+    optional:
+    - level
+    - hdr
+    - hdr_type
+    - dv
     overlay:
-      name: <<overlay_name>>
+      file: /images/overlays/resolution/<<overlay_name>>.png
       group: resolution
       weight: <<weight>>
       horizontal_align: left
       horizontal_offset: <<align>>
       vertical_align: top
       vertical_offset: <<align>>
-  # audio:
-  #   default:
-  #   overlay:
+    builder_level: <<level>>
+    plex_search:
+      all:
+        resolution: <<resolution>>
+        hdr: <<hdr>>
+    filters:
+      filepath: <<hdr_type>>
+      has_dolby_vision: <<dv>>
+
+  audio:
+    default:
+    - align: 10
+    optional:
+    - level
+    overlay:
+      file: /images/overlays/audio/<<overlay_name>>.png
+      group: audio
+      weight: <<weight>>
+      horizontal_align: left
+      horizontal_offset: <<align>>
+      vertical_align: top
+      vertical_offset: <<align>>
+    builder_level: <<level>>
+    plex_all: true
+    filters:
+      filepath: <<overlay_name>>
 
 overlays:
   # Resolution
-  4K-DV:
-    template: {name: resolution, weight: 100}
-    plex_search: {all: {resolution.regex: '(?i)2160|4K'}}
-    filters: {has_dolby_vision: true}
-  4K-HDR:
-    template: {name: resolution, weight: 90}
-    plex_search: {all: {resolution.regex: '(?i)2160|4K', hdr: true}}
-  4K:
-    template: {name: resolution, weight: 80}
-    plex_search: {any: {resolution.regex: '(?i)2160|4K'}}
-  1080P-DV:
-    template: {name: resolution, weight: 70}
-    plex_search: {all: {resolution.regex: '(?i)1080|2K'}}
-    filters: {has_dolby_vision: true}
-  1080P-HDR:
-    template: {name: resolution, weight: 60}
-    plex_search: {all: {resolution.regex: '(?i)1080|2K', hdr: true}}
-  1080P:
-    template: {name: resolution, weight: 50}
-    plex_search: {all: {resolution.regex: '(?i)1080|2K'}}
-  720P-DV:
-    template: {name: resolution, weight: 40}
-    plex_search: {all: {resolution.regex: '(?i)720|HD'}}
-    filters: {has_dolby_vision: true}
-  720P-HDR:
-    template: {name: resolution, weight: 30}
-    plex_search: {all: {resolution.regex: '(?i)720|HD', hdr: true}}
-  720P:
-    template: {name: resolution, weight: 20}
-    plex_search: {all: {resolution.regex: '(?i)720|HD'}}
+  "4K-DV-HDR10Plus":    {template: {name: resolution, weight: 39, resolution: 4K, dv: true, hdr: true, hdr_type: HDR10Plus}}
+  "4K-DV-HDR":          {template: {name: resolution, weight: 38, resolution: 4K, dv: true, hdr: true}}
+  "4K-DV":              {template: {name: resolution, weight: 37, resolution: 4K, dv: true}}
+  "4K-HDR10Plus":       {template: {name: resolution, weight: 36, resolution: 4K, hdr: true, hdr_type: HDR10Plus}}
+  "4K-HDR":             {template: {name: resolution, weight: 35, resolution: 4K, hdr: true}}
+  "4K":                 {template: {name: resolution, weight: 34, resolution: 4K}}
+  "1080P-DV-HDR10Plus": {template: {name: resolution, weight: 33, resolution: 1080p, dv: true, hdr: true, hdr_type: HDR10Plus}}
+  "1080P-DV-HDR":       {template: {name: resolution, weight: 32, resolution: 1080p, dv: true, hdr: true}}
+  "1080P-DV":           {template: {name: resolution, weight: 31, resolution: 1080p, dv: true}}
+  "1080P-HDR10Plus":    {template: {name: resolution, weight: 30, resolution: 1080p, hdr: true, hdr_type: HDR10Plus}}
+  "1080P-HDR":          {template: {name: resolution, weight: 29, resolution: 1080p, hdr: true}}
+  "1080P":              {template: {name: resolution, weight: 28, resolution: 1080p}}
+  "720P-DV-HDR10Plus":  {template: {name: resolution, weight: 27, resolution: 720p, dv: true, hdr: true, hdr_type: HDR10Plus}}
+  "720P-DV-HDR":        {template: {name: resolution, weight: 26, resolution: 720p, dv: true, hdr: true}}
+  "720P-DV":            {template: {name: resolution, weight: 25, resolution: 720p, dv: true}}
+  "720P-HDR10Plus":     {template: {name: resolution, weight: 24, resolution: 720p, hdr: true, hdr_type: HDR10Plus}}
+  "720P-HDR":           {template: {name: resolution, weight: 23, resolution: 720p, hdr: true}}
+  "720P":               {template: {name: resolution, weight: 22, resolution: 720p}}
+  "576P-DV-HDR10Plus":  {template: {name: resolution, weight: 21, resolution: 576p, dv: true, hdr: true, hdr_type: HDR10Plus}}
+  "576P-DV-HDR":        {template: {name: resolution, weight: 20, resolution: 576p, dv: true, hdr: true}}
+  "576P-DV":            {template: {name: resolution, weight: 19, resolution: 576p, dv: true}}
+  "576P-HDR10Plus":     {template: {name: resolution, weight: 18, resolution: 576p, hdr: true, hdr_type: HDR10Plus}}
+  "576P-HDR":           {template: {name: resolution, weight: 17, resolution: 576p, hdr: true}}
+  "576P":               {template: {name: resolution, weight: 16, resolution: 576p}}
+  "480P-DV-HDR10Plus":  {template: {name: resolution, weight: 15, resolution: 480p, dv: true, hdr: true, hdr_type: HDR10Plus}}
+  "480P-DV-HDR":        {template: {name: resolution, weight: 14, resolution: 480p, dv: true, hdr: true}}
+  "480P-DV":            {template: {name: resolution, weight: 13, resolution: 480p, dv: true}}
+  "480P-HDR10Plus":     {template: {name: resolution, weight: 12, resolution: 480p, hdr: true, hdr_type: HDR10Plus}}
+  "480P-HDR":           {template: {name: resolution, weight: 11, resolution: 480p, hdr: true}}
+  "480P":               {template: {name: resolution, weight: 10, resolution: 480p}}
 
   # Audio
-  # TrueHD-Atmos:
-  # TrueHD:
+  "TrueHD Atmos": {template: {name: audio, weight: 80}}
+  "DTS-X":        {template: {name: audio, weight: 75}}
+  "DD+ Atmos":    {template: {name: audio, weight: 70}}
+  "Atmos":        {template: {name: audio, weight: 65}}
+  "DTS-HD MA":    {template: {name: audio, weight: 60}}
+  "DTS-HD HRA":   {template: {name: audio, weight: 55}}
+  "FLAC":         {template: {name: audio, weight: 50}}
+  "PCM":          {template: {name: audio, weight: 45}}
+  "DD+":          {template: {name: audio, weight: 40}}
+  "DD":           {template: {name: audio, weight: 35}}
+  "DTS-ES":       {template: {name: audio, weight: 30}}
+  "DTS":          {template: {name: audio, weight: 25}}
+  "OPUS":         {template: {name: audio, weight: 20}}
+  "AAC":          {template: {name: audio, weight: 15}}
+  "MP3":          {template: {name: audio, weight: 10}}
