@@ -1,0 +1,10 @@
+templates:
+  preroll:
+    default:
+      ext: mp4
+    server_preroll: /prerolls/<<collection_name>>.<<ext>>
+    build_collection: false
+    schedule: <<schedule>>
+
+collections:
+  "2022-Glitchy": {template: {name: preroll, schedule: daily}}

@@ -1,0 +1,52 @@
+external_templates:
+  file: overlays/templates.yaml
+
+overlays:
+  # Video
+  "4K-DV-HDR10Plus":    {template: {name: video, weight: 39, res: "2160|4K", dv: true, hdr: true, hdr_type: HDR10(\+|P(lus)?)}}
+  "4K-DV-HDR":          {template: {name: video, weight: 38, res: "2160|4K", dv: true, hdr: true}}
+  "4K-DV":              {template: {name: video, weight: 37, res: "2160|4K", dv: true}}
+  "4K-HDR10Plus":       {template: {name: video, weight: 36, res: "2160|4K", hdr: true, hdr_type: HDR10(\+|P(lus)?)}}
+  "4K-HDR":             {template: {name: video, weight: 35, res: "2160|4K", hdr: true}}
+  "4K":                 {template: {name: video, weight: 34, res: "2160|4K"}}
+  "1080P-DV-HDR10Plus": {template: {name: video, weight: 33, res: "1080|2K", dv: true, hdr: true, hdr_type: HDR10(\+|P(lus)?)}}
+  "1080P-DV-HDR":       {template: {name: video, weight: 32, res: "1080|2K", dv: true, hdr: true}}
+  "1080P-DV":           {template: {name: video, weight: 31, res: "1080|2K", dv: true}}
+  "1080P-HDR10Plus":    {template: {name: video, weight: 30, res: "1080|2K", hdr: true, hdr_type: HDR10(\+|P(lus)?)}}
+  "1080P-HDR":          {template: {name: video, weight: 29, res: "1080|2K", hdr: true}}
+  "1080P":              {template: {name: video, weight: 28, res: "1080|2K"}}
+  "720P-DV-HDR10Plus":  {template: {name: video, weight: 27, res: "720|HD", dv: true, hdr: true, hdr_type: HDR10(\+|P(lus)?)}}
+  "720P-DV-HDR":        {template: {name: video, weight: 26, res: "720|HD", dv: true, hdr: true}}
+  "720P-DV":            {template: {name: video, weight: 25, res: "720|HD", dv: true}}
+  "720P-HDR10Plus":     {template: {name: video, weight: 24, res: "720|HD", hdr: true, hdr_type: HDR10(\+|P(lus)?)}}
+  "720P-HDR":           {template: {name: video, weight: 23, res: "720|HD", hdr: true}}
+  "720P":               {template: {name: video, weight: 22, res: "720|HD"}}
+  "576P-DV-HDR10Plus":  {template: {name: video, weight: 21, res: "576", dv: true, hdr: true, hdr_type: HDR10(\+|P(lus)?)}}
+  "576P-DV-HDR":        {template: {name: video, weight: 20, res: "576", dv: true, hdr: true}}
+  "576P-DV":            {template: {name: video, weight: 19, res: "576", dv: true}}
+  "576P-HDR10Plus":     {template: {name: video, weight: 18, res: "576", hdr: true, hdr_type: HDR10(\+|P(lus)?)}}
+  "576P-HDR":           {template: {name: video, weight: 17, res: "576", hdr: true}}
+  "576P":               {template: {name: video, weight: 16, res: "576"}}
+  "480P-DV-HDR10Plus":  {template: {name: video, weight: 15, res: "480|SD", dv: true, hdr: true, hdr_type: HDR10(\+|P(lus)?)}}
+  "480P-DV-HDR":        {template: {name: video, weight: 14, res: "480|SD", dv: true, hdr: true}}
+  "480P-DV":            {template: {name: video, weight: 13, res: "480|SD", dv: true}}
+  "480P-HDR10Plus":     {template: {name: video, weight: 12, res: "480|SD", hdr: true, hdr_type: HDR10(\+|P(lus)?)}}
+  "480P-HDR":           {template: {name: video, weight: 11, res: "480|SD", hdr: true}}
+  "480P":               {template: {name: video, weight: 10, res: "480|SD"}}
+
+  # Audio
+  "TrueHD Atmos": {template: {name: audio, weight: 80, codec: ''}}
+  "DTS-X":        {template: {name: audio, weight: 75, codec: ''}}
+  "DD+ Atmos":    {template: {name: audio, weight: 70, codec: ''}}
+  "Atmos":        {template: {name: audio, weight: 65, codec: ''}}
+  "DTS-HD MA":    {template: {name: audio, weight: 60, codec: ''}}
+  "DTS-HD HRA":   {template: {name: audio, weight: 55, codec: ''}}
+  "FLAC":         {template: {name: audio, weight: 50, codec: ''}}
+  "PCM":          {template: {name: audio, weight: 45, codec: ''}}
+  "DD+":          {template: {name: audio, weight: 40, codec: ''}}
+  "DD":           {template: {name: audio, weight: 35, codec: ''}}
+  "DTS-ES":       {template: {name: audio, weight: 30, codec: ''}}
+  "DTS":          {template: {name: audio, weight: 25, codec: ''}}
+  "OPUS":         {template: {name: audio, weight: 20, codec: ''}}
+  "AAC":          {template: {name: audio, weight: 15, codec: ''}}
+  "MP3":          {template: {name: audio, weight: 10, codec: ''}}

@@ -1,26 +1,30 @@
 libraries:
   Movies:
-    collection_files:
-    - file: /kometa/collections/preroll.yaml
-    - file: /kometa/collections/common.yaml
-      asset_directory: /images/collections
-    - file: /kometa/collections/movies.yaml
-      asset_directory: /images/collections
-
+    # Files
     metadata_files: /metadata/movies.yaml
+    collection_files:
+    - {file: /kometa/collections/preroll.yaml}
+    - {file: /kometa/collections/common.yaml, asset_directory: /images/collections}
+    - {file: /kometa/collections/movies.yaml, asset_directory: /images/collections}
     overlay_files:
-    - file: /kometa/overlays.yaml
+    - file: {/kometa/overlays/movies.yaml}
+    - file: {/kometa/overlays/common.yaml}
 
+    # Settings
     report_path: /kometa/reports/movies_report.yaml
     settings:
       asset_directory: /images/movies
 
+    # Operations
     operations:
       assets_for_all: true
-      mass_studio_update: tmdb
+      delete_collections:
+        configured: false
+        managed: false
       mass_originally_available_update: tmdb
+      mass_studio_update: tmdb
       # Genres
-      mass_genre_update: imdb
+      mass_genre_update: [imdb, tmdb]
       genre_mapper:
         "Film-Noir": ""
         "Music": ""
@@ -35,28 +39,30 @@ libraries:
       mass_background_update: tmdb
 
   Shows:
-    collection_files:
-    - file: /kometa/collections/common.yaml
-      asset_directory: /images/collections
-    - file: /kometa/collections/shows.yaml
-      asset_directory: /images/collections
-
+    # Files
     metadata_files: /metadata/shows.yaml
+    collection_files:
+    - {file: /kometa/collections/common.yaml, asset_directory: /images/collections}
+    - {file: /kometa/collections/shows.yaml,  asset_directory: /images/collections}
     overlay_files:
-    - file: /kometa/overlays.yaml
-    - file: /kometa/overlays.yaml
-      template_variables: {level: season}
-    - file: /kometa/overlays.yaml
-      template_variables: {level: episode}
+    - {file: /kometa/overlays/shows.yaml}
+    - {file: /kometa/overlays/common.yaml}
+    - {file: /kometa/overlays/common.yaml, template_variables: {level: season}}
+    - {file: /kometa/overlays/common.yaml, template_variables: {level: episode}}
 
+    # Settings
     report_path: /kometa/reports/shows_report.yaml
     settings:
       asset_directory: /images/shows
 
+    # Operations
     operations:
       assets_for_all: true
-      mass_studio_update: tmdb
+      delete_collections:
+        configured: false
+        managed: false
       mass_originally_available_update: tmdb
+      mass_studio_update: tmdb
       # Genres
       mass_genre_update: [tvdb, tmdb]
       genre_mapper:
@@ -84,8 +90,9 @@ libraries:
         episodes: true
 
 playlist_files:
-- file: /kometa/playlists.yaml
+  file: /kometa/playlists/playlists.yaml
   asset_directory: /images/playlists
+  template_variables: {libraries: [Movies, Shows]}
 
 settings:
   run_order:
@@ -105,9 +112,9 @@ settings:
   prioritize_assets: true
   dimensional_asset_rename: true
   download_url_assets: false
+  show_asset_not_needed: false
   show_missing_season_assets: true
   show_missing_episode_assets: true
-  show_asset_not_needed: false
 
   # Collections
   sync_mode: sync
@@ -142,7 +149,7 @@ settings:
   playlist_exclude_users:
   custom_repo:
 
-webhooks: # Can be individually specified per library as well
+webhooks:
   error:
   version:
   run_start:
@@ -150,7 +157,7 @@ webhooks: # Can be individually specified per library as well
   changes:
   delete:
 
-plex: # Can be individually specified per library as well; REQUIRED for the script to run
+plex:
   url: http://127.0.0.1:32400/
   token: ################################
   timeout: 60
@@ -160,15 +167,16 @@ plex: # Can be individually specified per library as well; REQUIRED for the scri
   optimize: false
   verify_ssl:
 
-tmdb: # REQUIRED for the script to run
+tmdb:
   apikey: ################################
   language: en
   cache_expiration: 60
   region:
-# tautulli: # Can be individually specified per library as well
+
+# tautulli:
 #   url: http://127.0.0.1:8181
-#   #url: http://192.168.50.82:8181/127.0.0.1
-#   apikey: ################################-u
+#   #url: ################################
+#   apikey: ################################
 
 trakt:
   client_id: ################################
@@ -186,12 +194,19 @@ trakt:
 mdblist:
   apikey: ################################
   cache_expiration: 60
-
 omdb:
   apikey: de26f375
   cache_expiration: 60
 
-# radarr: # Can be individually specified per library as well
+# notifiarr:
+#   apikey: ####################################
+# github:
+#   token: ################################
+# gotify:
+#   url: http://192.168.1.12:80
+#   token: ####################################
+
+# radarr:
 #   url: #http://192.168.1.12:7878
 #   token: ################################
 #   add_missing: false
@@ -208,7 +223,7 @@ omdb:
 #   plex_path:
 #   ignore_cache: false
 
-# sonarr: # Can be individually specified per library as well
+# sonarr:
 #   url: #http://192.168.1.12:8989
 #   token: ################################
 #   add_missing: false
@@ -227,11 +242,3 @@ omdb:
 #   sonarr_path:
 #   plex_path:
 #   ignore_cache: false
-
-# notifiarr:
-#   apikey: ####################################
-# github:
-#   token: ################################
-# gotify:
-#   url: http://192.168.1.12:80
-#   token: ####################################

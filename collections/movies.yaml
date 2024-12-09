@@ -1,5 +1,5 @@
 external_templates:
-- file: collections/templates.yaml
+  file: collections/templates.yaml
 
 collections:
   # Section 2: Seasonal
