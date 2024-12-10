@@ -54,8 +54,8 @@
 ### Source
 
 
-### Operations
-1. Mass update:
-    - Originally Available
-    - Studio
-    - Ratings: IMDb
+## Operations
+### Mass update:
+1. Originally Available
+2. Studio
+3. Ratings: IMDb
