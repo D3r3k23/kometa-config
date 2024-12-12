@@ -1,15 +1,15 @@
 libraries:
   Comedy:
     collection_files:
-    - file: config/collections/comedy/comedians.yaml
-      asset_directory: C:\Users\Derek\Library\images\Collections\people
-    - file: config/collections/comedy/comedy.yaml
-      asset_directory: C:\Users\Derek\Library\images\Collections\comedy
+    - file: /kometa/collections/comedy/comedians.yaml
+      asset_directory: /images/Collections/people
+    - file: /kometa/collections/comedy/comedy.yaml
+      asset_directory: /images/Collections/comedy
 
-    metadata_files: C:\Users\Derek\Library\metadata\comedy.yaml
-    report_path: config/reports/comedy_report.yaml
+    metadata_files: /metadata/comedy.yaml
+    report_path: /kometa/reports/comedy_report.yaml
     settings:
-      asset_directory: C:\Users\Derek\Library\images\comedy
+      asset_directory: /images/comedy
 
     operations:
       assets_for_all: true
@@ -22,35 +22,33 @@ libraries:
       mass_audience_rating_update: [imdb, tmdb]
       mass_critic_rating_update: mdb_metacritic
       content_rating_mapper: {'Not Rated': NR}
-      mass_poster_update: tmdb
-      mass_background_update: tmdb
 
-  Test Movies:
+  Movies:
     collection_files:
-    - {template_variables: {section: '01'}, asset_directory: C:\Users\Derek\Library\images\collections\basic, file: config/collections/basic/movies.yaml}
-    - {template_variables: {section: '01'}, asset_directory: C:\Users\Derek\Library\images\collections\basic, file: config/collections/basic/both.yaml}
-    - {template_variables: {section: '02'}, asset_directory: C:\Users\Derek\Library\images\collections\seasonal, file: config/collections/seasonal/movies.yaml}
-    - {template_variables: {section: '03'}, asset_directory: C:\Users\Derek\Library\images\collections\charts, file: config/collections/charts/movies.yaml}
-    - {template_variables: {section: '03'}, asset_directory: C:\Users\Derek\Library\images\collections\charts, file: config/collections/charts/both.yaml}
-    - {template_variables: {section: '04'}, asset_directory: C:\Users\Derek\Library\images\collections\series, file: config/collections/series/movies.yaml}
-    - {template_variables: {section: '04'}, asset_directory: C:\Users\Derek\Library\images\collections\series, file: config/collections/series/both.yaml}
-    - {template_variables: {section: '05'}, asset_directory: C:\Users\Derek\Library\images\collections\decades, file: config/collections/decades/decades.yaml}
-    - {template_variables: {section: '06'}, asset_directory: C:\Users\Derek\Library\images\collections\genres, file: config/collections/genres/movies.yaml}
-    - {template_variables: {section: '06'}, asset_directory: C:\Users\Derek\Library\images\collections\genres, file: config/collections/genres/both.yaml}
-    - {template_variables: {section: '07'}, asset_directory: C:\Users\Derek\Library\images\collections\studios, file: config/collections/studios/studios.yaml}
-    - {template_variables: {section: '08'}, asset_directory: C:\Users\Derek\Library\images\collections\formats, file: config/collections/formats/movies.yaml}
-    - {template_variables: {section: '08'}, asset_directory: C:\Users\Derek\Library\images\collections\formats, file: config/collections/formats/both.yaml}
-    - {template_variables: {section: '09'}, asset_directory: C:\Users\Derek\Library\images\collections\people, file: config/collections/people/movies.yaml}
-    - {template_variables: {section: '09'}, asset_directory: C:\Users\Derek\Library\images\collections\people, file: config/collections/people/both.yaml}
+    - {template_variables: {section: '01'}, asset_directory: /images/collections/basic, file: /kometa/collections/basic/movies.yaml}
+    - {template_variables: {section: '01'}, asset_directory: /images/collections/basic, file: /kometa/collections/basic/both.yaml}
+    - {template_variables: {section: '02'}, asset_directory: /images/collections/seasonal, file: /kometa/collections/seasonal/movies.yaml}
+    - {template_variables: {section: '03'}, asset_directory: /images/collections/charts, file: /kometa/collections/charts/movies.yaml}
+    - {template_variables: {section: '03'}, asset_directory: /images/collections/charts, file: /kometa/collections/charts/both.yaml}
+    - {template_variables: {section: '04'}, asset_directory: /images/collections/series, file: /kometa/collections/series/movies.yaml}
+    - {template_variables: {section: '04'}, asset_directory: /images/collections/series, file: /kometa/collections/series/both.yaml}
+    - {template_variables: {section: '05'}, asset_directory: /images/collections/decades, file: /kometa/collections/decades/decades.yaml}
+    - {template_variables: {section: '06'}, asset_directory: /images/collections/genres, file: /kometa/collections/genres/movies.yaml}
+    - {template_variables: {section: '06'}, asset_directory: /images/collections/genres, file: /kometa/collections/genres/both.yaml}
+    - {template_variables: {section: '07'}, asset_directory: /images/collections/studios, file: /kometa/collections/studios/studios.yaml}
+    - {template_variables: {section: '08'}, asset_directory: /images/collections/formats, file: /kometa/collections/formats/movies.yaml}
+    - {template_variables: {section: '08'}, asset_directory: /images/collections/formats, file: /kometa/collections/formats/both.yaml}
+    - {template_variables: {section: '09'}, asset_directory: /images/collections/people, file: /kometa/collections/people/movies.yaml}
+    - {template_variables: {section: '09'}, asset_directory: /images/collections/people, file: /kometa/collections/people/both.yaml}
 
-    metadata_files: C:\Users\Derek\Library\metadata\Movies.yaml
+    metadata_files: /metadata/movies.yaml
     overlay_files:
-    - file: config/overlays/movies.yaml
-    - file: config/overlays/both.yaml
+    - file: /kometa/overlays/movies.yaml
+    - file: /kometa/overlays/both.yaml
 
-    report_path: config/reports/movies_report.yaml
+    report_path: /kometa/reports/movies_report.yaml
     settings:
-      asset_directory: C:\Users\Derek\Library\images\Movies
+      asset_directory: /images/movies
 
     operations:
       assets_for_all: true
@@ -62,36 +60,35 @@ libraries:
       mass_originally_available_update: tmdb
       mass_audience_rating_update: [imdb, tmdb]
       mass_critic_rating_update: mdb_metacritic
-      content_rating_mapper: {'Not Rated': NR}
 
   Shows:
     collection_files:
-    - {template_variables: {section: '01'}, asset_directory: C:\Users\Derek\Library\images\collections\basic, file: config/collections/basic/shows.yaml}
-    - {template_variables: {section: '01'}, asset_directory: C:\Users\Derek\Library\images\collections\basic, file: config/collections/basic/both.yaml}
-    - {template_variables: {section: '02'}, asset_directory: C:\Users\Derek\Library\images\collections\seasonal, file: config/collections/seasonal/shows.yaml}
-    - {template_variables: {section: '03'}, asset_directory: C:\Users\Derek\Library\images\collections\charts, file: config/collections/charts/shows.yaml}
-    - {template_variables: {section: '03'}, asset_directory: C:\Users\Derek\Library\images\collections\charts, file: config/collections/charts/both.yaml}
-    - {template_variables: {section: '04'}, asset_directory: C:\Users\Derek\Library\images\collections\series, file: config/collections/series/shows.yaml}
-    - {template_variables: {section: '04'}, asset_directory: C:\Users\Derek\Library\images\collections\series, file: config/collections/series/both.yaml}
-    - {template_variables: {section: '05'}, asset_directory: C:\Users\Derek\Library\images\collections\decades, file: config/collections/decades/decades.yaml}
-    - {template_variables: {section: '06'}, asset_directory: C:\Users\Derek\Library\images\collections\genres, file: config/collections/genres/shows.yaml}
-    - {template_variables: {section: '06'}, asset_directory: C:\Users\Derek\Library\images\collections\genres, file: config/collections/genres/both.yaml}
-    - {template_variables: {section: '07'}, asset_directory: C:\Users\Derek\Library\images\collections\networks, file: config/collections/networks/networks.yaml}
-    - {template_variables: {section: '08'}, asset_directory: C:\Users\Derek\Library\images\collections\formats, file: config/collections/formats/shows.yaml}
-    - {template_variables: {section: '08'}, asset_directory: C:\Users\Derek\Library\images\collections\formats, file: config/collections/formats/both.yaml}
-    - {template_variables: {section: '09'}, asset_directory: C:\Users\Derek\Library\images\collections\people, file: config/collections/people/shows.yaml}
-    - {template_variables: {section: '09'}, asset_directory: C:\Users\Derek\Library\images\collections\people, file: config/collections/people/both.yaml}
+    - {template_variables: {section: '01'}, asset_directory: /images/collections/basic, file: /kometa/collections/basic/shows.yaml}
+    - {template_variables: {section: '01'}, asset_directory: /images/collections/basic, file: /kometa/collections/basic/both.yaml}
+    - {template_variables: {section: '02'}, asset_directory: /images/collections/seasonal, file: /kometa/collections/seasonal/shows.yaml}
+    - {template_variables: {section: '03'}, asset_directory: /images/collections/charts, file: /kometa/collections/charts/shows.yaml}
+    - {template_variables: {section: '03'}, asset_directory: /images/collections/charts, file: /kometa/collections/charts/both.yaml}
+    - {template_variables: {section: '04'}, asset_directory: /images/collections/series, file: /kometa/collections/series/shows.yaml}
+    - {template_variables: {section: '04'}, asset_directory: /images/collections/series, file: /kometa/collections/series/both.yaml}
+    - {template_variables: {section: '05'}, asset_directory: /images/collections/decades, file: /kometa/collections/decades/decades.yaml}
+    - {template_variables: {section: '06'}, asset_directory: /images/collections/genres, file: /kometa/collections/genres/shows.yaml}
+    - {template_variables: {section: '06'}, asset_directory: /images/collections/genres, file: /kometa/collections/genres/both.yaml}
+    - {template_variables: {section: '07'}, asset_directory: /images/collections/networks, file: /kometa/collections/networks/networks.yaml}
+    - {template_variables: {section: '08'}, asset_directory: /images/collections/formats, file: /kometa/collections/formats/shows.yaml}
+    - {template_variables: {section: '08'}, asset_directory: /images/collections/formats, file: /kometa/collections/formats/both.yaml}
+    - {template_variables: {section: '09'}, asset_directory: /images/collections/people, file: /kometa/collections/people/shows.yaml}
+    - {template_variables: {section: '09'}, asset_directory: /images/collections/people, file: /kometa/collections/people/both.yaml}
 
-    metadata_files: C:\Users\Derek\Library\metadata\Shows.yaml
+    metadata_files: /metadata/shows.yaml
     overlay_files:
-    - {file: config/overlays/shows.yaml}
-    - {file: config/overlays/both.yaml}
-    - {file: config/overlays/both.yaml, template_variables: {level: season}}
-    - {file: config/overlays/both.yaml, template_variables: {level: episode}}
+    - {file: /kometa/overlays/shows.yaml}
+    - {file: /kometa/overlays/both.yaml}
+    - {file: /kometa/overlays/both.yaml, template_variables: {level: season}}
+    - {file: /kometa/overlays/both.yaml, template_variables: {level: episode}}
 
-    report_path: config/reports/shows_report.yaml
+    report_path: /kometa/reports/shows_report.yaml
     settings:
-      asset_directory: C:\Users\Derek\Library\images\Shows
+      asset_directory: /images/shows
 
     operations:
       assets_for_all: true
@@ -104,11 +101,10 @@ libraries:
       mass_audience_rating_update: [imdb, tmdb]
       mass_episode_audience_rating_update: [imdb, tmdb]
       mass_critic_rating_update: mdb_metacritic
-      content_rating_mapper: {'Not Rated': NR}
 
 playlist_files:
-  file: config/playlists/playlists.yaml
-  asset_directory: C:\Users\Derek\Library\images\playlists
+  file: /kometa/playlists/playlists.yaml
+  asset_directory: /images/playlists
   template_variables:
     libraries: [Movies, Shows]
 
@@ -125,12 +121,12 @@ settings:
 
   # Assets
   asset_directory:
-  asset_folders: true
   asset_depth: 2
+  asset_folders: true
   create_asset_folders: true
-  prioritize_assets: true
   dimensional_asset_rename: true
   download_url_assets: false
+  prioritize_assets: true
   show_asset_not_needed: false
   show_missing_season_assets: true
   show_missing_episode_assets: true
@@ -154,17 +150,20 @@ settings:
 
   save_report: true
   tvdb_language: eng
+
+  # Playlists
+  playlist_exclude_users:
   playlist_sync_to_users: all
   playlist_report: false
-  verify_ssl: true
 
   overlay_artwork_filetype: jpg
   overlay_artwork_quality: 95
+  custom_repo:
+
   ignore_ids:
   ignore_imdb_ids:
   item_refresh_delay: 0
-  playlist_exclude_users:
-  custom_repo:
+  verify_ssl: true
 
 webhooks:
   error:
@@ -212,7 +211,7 @@ mdblist:
   apikey: ################################
   cache_expiration: 60
 omdb:
-  apikey: de26f375
+  apikey: ########
   cache_expiration: 60
 
 # notifiarr:
