@@ -1,9 +1,4 @@
-external_templates:
-  file: collections/templates.yaml
-
 collections:
-  # Section 1
-
   "Recommended by D3r3k":
     template:
       name: basic_collection
@@ -72,7 +67,3 @@ collections:
       sort_prefix: "08"
     trakt_chart: {chart: popular, limit: 20}
     visible_library: true
-
-
-  # Section 6: Decades
-

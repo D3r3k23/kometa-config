@@ -1,0 +1,6 @@
+collections:
+  "Remux":  {template: source}
+  "Bluray": {template: source}
+  "WEB":    {template: source}
+  "DVD":    {template: source}
+  "HDTV":   {template: source}
