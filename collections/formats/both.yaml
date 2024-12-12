@@ -1,9 +1,60 @@
+external_templates:
+- file: config/collections/formats/templates.yaml
+- file: config/collections/templates.yaml
+
 collections:
-  Collectionless:
-    plex_collectionless:
-      exclude_prefix:
-      - "!"
-      - "~"
-      exclude:
-      - Mad Max Collection
-      - Star Wars Collection
+  # Source
+  "Remux Collection":
+    template:
+    - {name: format, sort_prefix: '01', sort: Source 01}
+    - {name: visible, library: true, home: true, shared: true}
+    - {name: filepath_search, regex: '\b(Remux)\b'}
+  "Blu-ray Collection":
+    template:
+    - {name: format, sort_prefix: '02', sort: Source 02}
+    - {name: filepath_search, regex: '\b(Blu[ ._-]?ray|BD|BR|HD[ ._-]?DVD)\b'}
+  "WEB Collection":
+    template:
+    - {name: format, sort_prefix: '02', sort: Source 03}
+    - {name: filepath_search, regex: '\b(WEB[ ._-]?(DL|RIP))\b'}
+  "DVD Collection":
+    template:
+    - {name: format, sort_prefix: '02', sort: Source 04}
+    - {name: filepath_search, regex: '\b(DVD)\b'}
+  "HDTV Collection":
+    template:
+    - {name: format, sort_prefix: '02', sort: Source 05}
+    - {name: filepath_search, regex: '\b(HD[ ._-]?TV)\b'}
+
+  # Video
+  "1080p Collection":
+    template:
+    - {name: format, sort_prefix: '03', sort: Video 04}
+    - {name: resolution_search, regex: '1080|2K'}
+  "4K Collection":
+    template:
+    - {name: format, sort_prefix: '03', sort: Video 03}
+    - {name: visible, library: true, home: true, shared: true}
+    - {name: resolution_search, regex: '2160|4K'}
+  "4K + HDR Collection":
+    template:
+    - {name: format, sort_prefix: '03', sort: Video 02}
+    - {name: resolution_search, regex: '2160|4K', hdr: true}
+  "4K + Dolby Vision Collection":
+    template:
+    - {name: format, sort_prefix: '03', sort: Video 01}
+    - {name: visible, library: true, home: true, shared: true}
+    - {name: resolution_search, regex: '2160|4K', hdr: true}
+    filters: {has_dolby_vision: true}
+
+  # Audio
+  "Dolby Atmos Collection":
+    template:
+    - {name: format, sort_prefix: '04', sort: Audio 01}
+    - {name: visible, library: true, home: true, shared: true}
+    - {name: filepath_search, regex: '\b(Atmos)(\b|\d)'}
+  "DTS-X Collection":
+    template:
+    - {name: format, sort_prefix: '04', sort: Audio 02}
+    - {name: visible, library: true, home: true, shared: true}
+    - {name: filepath_search, regex: '\b(DTS[ ._-]?X)(\b|\d)'}

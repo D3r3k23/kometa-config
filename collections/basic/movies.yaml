@@ -1,0 +1,34 @@
+external_templates:
+- file: config/collections/basic/templates.yaml
+- file: config/collections/templates.yaml
+
+collections:
+  "Recently Released Movies":
+    template:
+    - {name: recent, sort_prefix: '01', sort: Recent 01}
+    - {name: recently_released, days: 365}
+
+  "D3r3k's Favorites":
+    template:
+    - {name: basic, sort_prefix: '06', sort: D3r3k's Favorites 01}
+    - {name: visible, library: true, home: true, shared: true}
+    - {name: trakt_list, user: d3r3k23, list: favorite-movies}
+    item_label: Favorite
+
+  "Top Movies Released This Year":
+    template:
+    - {name: recent, sort_prefix: '07'}
+    - {name: top_rated, year: <<current_year>>, limit: 10}
+
+  "Classic Movies":
+    template:
+    - {name: basic, sort_prefix: '08'}
+    - {name: visible, library: true, home: true, shared: true}
+    - {name: trakt_list, user: d3r3k23, list: classic-movies}
+    item_label: Classic
+
+  # Fan Edit Collection
+
+  # 80s Action Movies
+  # Best 90s Movies
+  # Best 2000s Movies

@@ -1,69 +1,22 @@
-collections:
-  "Recommended by D3r3k":
-    template:
-      name: basic_collection
-      sort_prefix: "01"
-      order: random
-    trakt_list_details: https://trakt.tv/users/d3r3k23/lists/recommended-by-d3r3k
-    limit: 20
-    # smart_label:
-    #   limit: 20
-    #   all:
-    #     label: <<smart_label>>
-    #     unplayed: true
+templates:
+  seasonal:
+    default:
+      section: '00'
+      sort_prefix: '>'
+      order: custom
+    optional:
+    - range
+    # schedule: range(<<range>>)
+    delete_not_scheduled: true
+    sort_title: '!<<section>>-Seasonal-<<sort_prefix>> <<collection_sort>>'
+    label: Seasonal
+    collection_order: <<order>>
+    collection_mode: hide
     visible_library: true
     visible_home: true
     visible_shared: true
 
-  "D3r3k's Trakt Recommended":
-    template:
-      name: basic_collection
-      sort_prefix: "02"
-    trakt_recommendations: 20
-    visible_library: true
-    visible_home: true
-
-  "D3r3k's Watchlist":
-    template:
-      name: basic_collection
-      sort_prefix: "03"
-    trakt_userlist: {userlist: watchlist, user: me}
-    visible_library: true
-    visible_home: true
-
-  "D3r3k's Favorites":
-    template:
-      name: basic_collection
-      sort_prefix: "04"
-    trakt_userlist: {userlist: favorites, user: me}
-    visible_library: true
-    visible_home: true
-    visible_shared: true
-
-  "IMDb Top 250":
-    template:
-      name: imdb_chart
-      sort_prefix: "05"
-      type: top
-    visible_library: true
-
-  "IMDb Popular":
-    template:
-      name: imdb_chart
-      sort_prefix: "06"
-      type: popular
-    visible_library: true
-
-  "Trakt Trending":
-    template:
-      name: basic_collection
-      sort_prefix: "07"
-    trakt_chart: {chart: trending, limit: 20}
-    visible_library: true
-
-  "Trakt Popular":
-    template:
-      name: basic_collection
-      sort_prefix: "08"
-    trakt_chart: {chart: popular, limit: 20}
-    visible_library: true
+  tmdb_holiday:
+    plex_all: true
+    filters:
+      tmdb_keyword: <<keyword>>

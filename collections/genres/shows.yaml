@@ -1,0 +1,44 @@
+external_templates:
+- file: config/collections/genres/templates.yaml
+
+collections:
+  # Genres
+  Action:          {template: {name: genre, tvdb_genre: Action}}
+  Adventure:       {template: {name: genre, tvdb_genre: Adventure}}
+  Animation:       {template: {name: genre, tvdb_genre: [Animation, Anime]}}
+  Awards Show:     {template: {name: genre, tvdb_genre: Awards Show}}
+  Biography:       {template: {name: genre, tmdb_keyword: [biography, biopic]}}
+  Comedy:          {template: {name: genre, tvdb_genre: Comedy}}
+  Crime:           {template: {name: genre, tvdb_genre: Crime}}
+  Documentary:     {template: {name: genre, tvdb_genre: Documentary}}
+  Drama:           {template: {name: genre, tvdb_genre: Drama}}
+  Family:          {template: {name: genre, tvdb_genre: Family}}
+  Fantasy:         {template: {name: genre, tvdb_genre: Fantasy}}
+  Film Noir:       {template: {name: genre, tmdb_keyword: film noir}}
+  Food:            {template: {name: genre, tvdb_genre: Food}}
+  Game Show:       {template: {name: genre, tvdb_genre: Game Show}}
+  History:         {template: {name: genre, tvdb_genre: History}}
+  Home & Garden:   {template: {name: genre, tvdb_genre: Home and Garden}}
+  Horror:          {template: {name: genre, tvdb_genre: Horror}}
+  Indie:           {template: {name: genre, tvdb_genre: Indie}}
+  Kids:            {template: {name: genre, tvdb_genre: Children}}
+  Martial Arts:    {template: {name: genre, tvdb_genre: Martial Arts}}
+  Miniseries:      {template: {name: genre, tvdb_genre: Mini-Series}}
+  Musical:         {template: {name: genre, tvdb_genre: Musical}}
+  Mystery:         {template: {name: genre, tvdb_genre: Mystery}}
+  News:            {template: {name: genre, tvdb_genre: News}}
+  Reality:         {template: {name: genre, tvdb_genre: Reality}}
+  Romance:         {template: {name: genre, tvdb_genre: Romance}}
+  Science Fiction: {template: {name: genre, tvdb_genre: Science Fiction}}
+  Soap:            {template: {name: genre, tvdb_genre: Soap}}
+  Sports:          {template: {name: genre, tvdb_genre: Sport}}
+  Talk Show:       {template: {name: genre, tvdb_genre: Talk Show}}
+  Thriller:        {template: {name: genre, tvdb_genre: Thriller}}
+  Travel:          {template: {name: genre, tvdb_genre: Travel}}
+  War:             {template: {name: genre, tvdb_genre: War}}
+  Western:         {template: {name: genre, tvdb_genre: Western}}
+
+  # Subgenres
+  Anthology: {template: {name: subgenre, tmdb_keyword: anthology}}
+  Music:     {template: {name: subgenre, tmdb_keyword: music}}
+  Suspense:  {template: {name: subgenre, tvdb_genre: Suspense}}

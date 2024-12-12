@@ -1,0 +1,67 @@
+external_templates:
+- file: config/collections/basic/templates.yaml
+- file: config/collections/templates.yaml
+
+collections:
+  "Recently Aired":
+    template:
+    - {name: recent, sort_prefix: '01', sort: Recent 01A, level: season}
+    - {name: recently_released, episodes: true}
+
+  "Recently Released Episodes":
+    template:
+    - {name: recent, sort_prefix: '01', sort: Recent 01B, level: episode}
+    - {name: recently_released, episodes: true, limit: 100}
+
+  "Recently Watched Episodes":
+    template:
+    - {name: recent, sort_prefix: '01', sort: Recent 03B, level: episode}
+    - {name: recently_watched, episodes: true, limit: 100}
+
+  "D3r3k's Favorites":
+    template:
+    - {name: basic, sort_prefix: '06', sort: D3r3k's Favorites 01}
+    - {name: visible, library: true, home: true, shared: true}
+    - {name: trakt_list, user: d3r3k23, list: favorite-shows}
+    item_label: Favorite
+
+  "Favorite Seasons":
+    template: {name: trakt_list, user: d3r3k23, list: favorite-seasons}
+    build_collection: false
+    builder_level: season
+    item_label: Favorite
+    sync_mode: append
+  "Favorite Episodes":
+    template: {name: trakt_list, user: d3r3k23, list: favorite-episodes}
+    build_collection: false
+    builder_level: episode
+    item_label: Favorite
+    sync_mode: append
+
+  "D3r3k's Favorite Seasons":
+    template:
+    - {name: basic, sort_prefix: '06', sort: D3r3k's Favorites 02}
+    - {name: visible, library: true}
+    - {name: trakt_list, user: d3r3k23, list: favorite-seasons}
+    - {name: season_label_search, label: Favorite}
+    # item_label: Favorite
+    collection_order: user_rating.desc
+
+  "D3r3k's Favorite Episodes":
+    template:
+    - {name: basic, sort_prefix: '06', sort: D3r3k's Favorites 03}
+    - {name: visible, library: true}
+    - {name: trakt_list, user: d3r3k23, list: favorite-episodes}
+    - {name: episode_label_search, label: Favorite}
+    # item_label: Favorite
+    collection_order: user_rating.desc
+
+  "Top Ongoing Shows":
+    template:
+    - {name: recent, sort_prefix: '07'}
+    - {name: top_rated, ongoing: true}
+
+  "Top Rated Episodes":
+      template:
+      - {name: recent, sort_prefix: '08', level: episode}
+      - {name: top_rated, episodes: true}

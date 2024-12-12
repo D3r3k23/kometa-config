@@ -1,0 +1,34 @@
+external_templates:
+- file: config/collections/genres/templates.yaml
+
+collections:
+  # Genres
+  Action:          {template: {name: genre, tmdb_genre: Action}}
+  Adventure:       {template: {name: genre, tmdb_genre: Adventure}}
+  Animation:       {template: {name: genre, tmdb_genre: Animation}}
+  Comedy:          {template: {name: genre, tmdb_genre: Comedy}}
+  Crime:           {template: {name: genre, tmdb_genre: Crime}}
+  Biography:       {template: {name: genre, tmdb_keyword: [biography, biopic]}}
+  Documentary:     {template: {name: genre, tmdb_genre: Documentary}}
+  Drama:           {template: {name: genre, tmdb_genre: Drama}}
+  Family:          {template: {name: genre, tmdb_genre: Family}}
+  Fantasy:         {template: {name: genre, tmdb_genre: Fantasy}}
+  Film Noir:       {template: {name: genre, tmdb_keyword: film noir}}
+  History:         {template: {name: genre, tmdb_genre: History}}
+  Horror:          {template: {name: genre, tmdb_genre: Horror}}
+  Indie:           {template: {name: genre, tmdb_keyword: indie}}
+  Kids:            {template: {name: genre, tmdb_keyword: [kids, children]}}
+  Music:           {template: {name: genre, tmdb_genre: Music}}
+  Musical:         {template: {name: genre, tmdb_keyword: musical}}
+  Mystery:         {template: {name: genre, tmdb_genre: Mystery}}
+  Romance:         {template: {name: genre, tmdb_genre: Romance}}
+  Science Fiction: {template: {name: genre, tmdb_genre: Science Fiction}}
+  Sports:          {template: {name: genre, tmdb_keyword: [sport, sports]}}
+  Martial Arts:    {template: {name: genre, tmdb_keyword: martial arts}}
+  Thriller:        {template: {name: genre, tmdb_genre: Thriller}}
+  War:             {template: {name: genre, tmdb_genre: War}}
+  Western:         {template: {name: genre, tmdb_genre: Western}}
+
+  # Subgenres
+  Food:     {template: {name: subgenre, tmdb_keyword: [food, cooking]}}
+  Suspense: {template: {name: subgenre, tmdb_keyword: [suspense]}}

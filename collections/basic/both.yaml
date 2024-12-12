@@ -1,9 +1,51 @@
+external_templates:
+- file: config/collections/basic/templates.yaml
+- file: config/collections/templates.yaml
+
 collections:
-  Collectionless:
-    plex_collectionless:
-      exclude_prefix:
-      - "!"
-      - "~"
-      exclude:
-      - Mad Max Collection
-      - Star Wars Collection
+  "Recently Added":
+    template:
+    - {name: recent, sort_prefix: '01', sort: Recent 02}
+    - {name: recently_added, days: 60, limit: 100}
+
+  # "Recently Watched":
+  #   template:
+  #   - {name: recent, sort_prefix: '01', sort: Recent 03}
+  #   - {name: recently_watched, days: 180}
+
+  "Next on Watchlist":
+    template:
+    - {name: basic, sort_prefix: '02'}
+    - {name: visible, library: true, home: true, shared: true}
+    plex_watchlist: critic_rating.desc
+    limit: 20
+    # collection_filtering: user
+    # smart_filter: {all: {unplayed: true}}
+    # smart_filter: {all: {unplayed_episodes: true}}
+
+  "D3r3k's Trakt Watchlist":
+    template:
+    - {name: basic, sort_prefix: '03'}
+    - {name: visible, library: true, home: true}
+    trakt_userlist: {user: me, userlist: watchlist}
+    # smart_filter: {all: {unplayed: true}}
+    # smart_filter: {all: {unplayed_episodes: true}}
+
+  "Recommended by Trakt":
+    template:
+    - {name: basic, sort_prefix: '04'}
+    - {name: visible, library: true, home: true}
+    trakt_recommendations: 20
+
+  "Recommended by D3r3k":
+    template:
+    - {name: basic, sort_prefix: '05'} # , order: random}
+    - {name: trakt_list, user: d3r3k23, list: recommended-by-d3r3k}
+    - {name: visible, library: true, home: true, shared: true}
+    limit: 25
+    # collection_filtering: user
+    # smart_label:
+    #   limit: 25
+    #   all:
+    #     label: <<smart_label>>
+    #     unplayed: true

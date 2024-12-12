@@ -1,16 +1,18 @@
+templates:
+  trakt_list:
+    trakt_list: https://trakt.tv/users/<<user>>/lists/<<list>>
+
 playlists:
   "MCU: Chronological Order":
-    trakt_list: https://trakt.tv/users/xrayblaster/lists/marvel-cinematic-universe
-    libraries: Movies, Shows
-    sync_to_users: all
+    template: {name: trakt_list, user: donxy, list: marvel-cinematic-universe}
+    libraries: [Movies, Shows]
     summary: >-
       The Marvel Cinematic Universe (MCU) is a collection of movies and television series that tell a singular
       narrative related to Marvel characters, settings and stories. The MCU is a product from Disney and Marvel
       that brings us heroes from Black Panther and Doctor Strange to Spider-Man and Iron Man.
   "Star Wars: Chronological Order":
-    trakt_list: https://trakt.tv/users/xrayblaster/lists/star-wars-chronological-order
-    libraries: Movies, Shows
-    sync_to_users: all
+    template: {name: trakt_list, user: xrayblaster, list: star-wars-chronological-order}
+    libraries: [Movies, Shows]
     summary: >-
       A long time ago in a galaxy far, far away, a farm boy on a desert planet dreamed of joining a rebellion
       and saving a princess from a dark lord, and thus, one of the most successful cinematic sagas of all time
@@ -18,24 +20,21 @@ playlists:
       comic books, video games, TV series, and memorabilia in every possible form. Today, more than 40 years
       after it first arrived, Star Wars remains a global pop culture phenomenon, and the story still isn't over.
   "Star Wars: Machete Order":
-    trakt_list: https://trakt.tv/users/hgferr/lists/star-wars-machete-order
+    template: {name: trakt_list, user: hgferr, list: star-wars-machete-order}
     libraries: Movies
-    sync_to_users: all
     summary: >-
       For Star Wars fans who have issues with the prequel trilogy, watching the saga in "Machete Order' is a
       viewing workaround that omits Episode I entirely - a gift, for myriad reasons, to first-time watchers that
       also maintains a spoiler-free environment.
   "Star Wars: The Clone Wars - Chronological Order":
-    trakt_list: https://trakt.tv/users/tomfin46/lists/star-wars-the-clone-wars-chronological-episode-order
+    template: {name: trakt_list, user: tomfin46, list: star-wars-the-clone-wars-chronological-episode-order}
     libraries: Shows
-    sync_to_users: all
     summary: >-
       As more star systems get swept into the Clone Wars, the valiant Jedi knights struggle to maintain order.
       Anakin Skywalker and his Padawan learner Ahsoka Tano embark on a mission that brings them face-to-face with
       Jabba the Hutt. Plotting against them is evil Count Dooku and his agent, Asajj Ventress, who would ensure
       that the Jedis fail. Meanwhile, Yoda and Obi-Wan Kenobi lead the clone army against the forces of the Dark Side.
   "World War II Timeline":
-    trakt_list: https://trakt.tv/users/davidjustice10/lists/pacific-brothers-of-the-air
+    template: {name: trakt_list, user: davidjustice10, list: pacific-brothers-of-the-air}
     libraries: Shows
-    sync_to_users: all
     summary: Timeline of the Band of Brothers, The Pacific, and Masters of the Air miniseries.

@@ -1,98 +1,116 @@
 libraries:
-  Movies:
-    # Files
-    metadata_files: /metadata/movies.yaml
+  Comedy:
     collection_files:
-    - {file: /kometa/collections/preroll.yaml}
-    - {file: /kometa/collections/common.yaml, asset_directory: /images/collections}
-    - {file: /kometa/collections/movies.yaml, asset_directory: /images/collections}
-    overlay_files:
-    - file: {/kometa/overlays/movies.yaml}
-    - file: {/kometa/overlays/common.yaml}
+    - file: config/collections/comedy/comedians.yaml
+      asset_directory: C:\Users\Derek\Library\images\Collections\people
+    - file: config/collections/comedy/comedy.yaml
+      asset_directory: C:\Users\Derek\Library\images\Collections\comedy
 
-    # Settings
-    report_path: /kometa/reports/movies_report.yaml
+    metadata_files: C:\Users\Derek\Library\metadata\comedy.yaml
+    report_path: config/reports/comedy_report.yaml
     settings:
-      asset_directory: /images/movies
+      asset_directory: C:\Users\Derek\Library\images\comedy
 
-    # Operations
     operations:
       assets_for_all: true
       delete_collections:
         configured: false
-        managed: false
-      mass_originally_available_update: tmdb
+        managed: true
+      mass_genre_update: Stand-Up Comedy
       mass_studio_update: tmdb
-      # Genres
-      mass_genre_update: [imdb, tmdb]
-      genre_mapper:
-        "Film-Noir": ""
-        "Music": ""
-        "Sci-Fi": Science Fiction
-        "Sport": Sports
-      # Ratings
-      mass_audience_rating_update: imdb
-      mass_critic_rating_update: [trakt_user, mdb_metacritic]
-      mass_user_rating_update: trakt_user
-      # Images
+      mass_originally_available_update: tmdb
+      mass_audience_rating_update: [imdb, tmdb]
+      mass_critic_rating_update: mdb_metacritic
+      content_rating_mapper: {'Not Rated': NR}
       mass_poster_update: tmdb
       mass_background_update: tmdb
 
-  Shows:
-    # Files
-    metadata_files: /metadata/shows.yaml
+  Test Movies:
     collection_files:
-    - {file: /kometa/collections/common.yaml, asset_directory: /images/collections}
-    - {file: /kometa/collections/shows.yaml,  asset_directory: /images/collections}
+    - {template_variables: {section: '01'}, asset_directory: C:\Users\Derek\Library\images\collections\basic, file: config/collections/basic/movies.yaml}
+    - {template_variables: {section: '01'}, asset_directory: C:\Users\Derek\Library\images\collections\basic, file: config/collections/basic/both.yaml}
+    - {template_variables: {section: '02'}, asset_directory: C:\Users\Derek\Library\images\collections\seasonal, file: config/collections/seasonal/movies.yaml}
+    - {template_variables: {section: '03'}, asset_directory: C:\Users\Derek\Library\images\collections\charts, file: config/collections/charts/movies.yaml}
+    - {template_variables: {section: '03'}, asset_directory: C:\Users\Derek\Library\images\collections\charts, file: config/collections/charts/both.yaml}
+    - {template_variables: {section: '04'}, asset_directory: C:\Users\Derek\Library\images\collections\series, file: config/collections/series/movies.yaml}
+    - {template_variables: {section: '04'}, asset_directory: C:\Users\Derek\Library\images\collections\series, file: config/collections/series/both.yaml}
+    - {template_variables: {section: '05'}, asset_directory: C:\Users\Derek\Library\images\collections\decades, file: config/collections/decades/decades.yaml}
+    - {template_variables: {section: '06'}, asset_directory: C:\Users\Derek\Library\images\collections\genres, file: config/collections/genres/movies.yaml}
+    - {template_variables: {section: '06'}, asset_directory: C:\Users\Derek\Library\images\collections\genres, file: config/collections/genres/both.yaml}
+    - {template_variables: {section: '07'}, asset_directory: C:\Users\Derek\Library\images\collections\studios, file: config/collections/studios/studios.yaml}
+    - {template_variables: {section: '08'}, asset_directory: C:\Users\Derek\Library\images\collections\formats, file: config/collections/formats/movies.yaml}
+    - {template_variables: {section: '08'}, asset_directory: C:\Users\Derek\Library\images\collections\formats, file: config/collections/formats/both.yaml}
+    - {template_variables: {section: '09'}, asset_directory: C:\Users\Derek\Library\images\collections\people, file: config/collections/people/movies.yaml}
+    - {template_variables: {section: '09'}, asset_directory: C:\Users\Derek\Library\images\collections\people, file: config/collections/people/both.yaml}
+
+    metadata_files: C:\Users\Derek\Library\metadata\Movies.yaml
     overlay_files:
-    - {file: /kometa/overlays/shows.yaml}
-    - {file: /kometa/overlays/common.yaml}
-    - {file: /kometa/overlays/common.yaml, template_variables: {level: season}}
-    - {file: /kometa/overlays/common.yaml, template_variables: {level: episode}}
+    - file: config/overlays/movies.yaml
+    - file: config/overlays/both.yaml
 
-    # Settings
-    report_path: /kometa/reports/shows_report.yaml
+    report_path: config/reports/movies_report.yaml
     settings:
-      asset_directory: /images/shows
+      asset_directory: C:\Users\Derek\Library\images\Movies
 
-    # Operations
     operations:
       assets_for_all: true
       delete_collections:
         configured: false
-        managed: false
-      mass_originally_available_update: tmdb
+        managed: true
+      mass_genre_update: reset
       mass_studio_update: tmdb
-      # Genres
-      mass_genre_update: [tvdb, tmdb]
-      genre_mapper:
-        "Children": Family
-        "Game-Show": Game Show
-        "Martial Arts": ""
-        "Mini-Series": Miniseries
-        "Reality-TV": Reality
-        "Sci-Fi": Science Fiction
-        "Sport": Sports
-        "Talk-Show": Talk Show
-      # Ratings
-      mass_audience_rating_update: imdb
-      mass_episode_audience_rating_update: imdb
-      mass_critic_rating_update: [trakt_user, mdb_metacritic]
-      mass_user_rating_update: trakt_user
-      # Images
-      mass_poster_update:
-        source: tmdb
-        seasons: true
-        episodes: true
-      mass_background_update:
-        source: tmdb
-        seasons: true
-        episodes: true
+      mass_originally_available_update: tmdb
+      mass_audience_rating_update: [imdb, tmdb]
+      mass_critic_rating_update: mdb_metacritic
+      content_rating_mapper: {'Not Rated': NR}
+
+  Shows:
+    collection_files:
+    - {template_variables: {section: '01'}, asset_directory: C:\Users\Derek\Library\images\collections\basic, file: config/collections/basic/shows.yaml}
+    - {template_variables: {section: '01'}, asset_directory: C:\Users\Derek\Library\images\collections\basic, file: config/collections/basic/both.yaml}
+    - {template_variables: {section: '02'}, asset_directory: C:\Users\Derek\Library\images\collections\seasonal, file: config/collections/seasonal/shows.yaml}
+    - {template_variables: {section: '03'}, asset_directory: C:\Users\Derek\Library\images\collections\charts, file: config/collections/charts/shows.yaml}
+    - {template_variables: {section: '03'}, asset_directory: C:\Users\Derek\Library\images\collections\charts, file: config/collections/charts/both.yaml}
+    - {template_variables: {section: '04'}, asset_directory: C:\Users\Derek\Library\images\collections\series, file: config/collections/series/shows.yaml}
+    - {template_variables: {section: '04'}, asset_directory: C:\Users\Derek\Library\images\collections\series, file: config/collections/series/both.yaml}
+    - {template_variables: {section: '05'}, asset_directory: C:\Users\Derek\Library\images\collections\decades, file: config/collections/decades/decades.yaml}
+    - {template_variables: {section: '06'}, asset_directory: C:\Users\Derek\Library\images\collections\genres, file: config/collections/genres/shows.yaml}
+    - {template_variables: {section: '06'}, asset_directory: C:\Users\Derek\Library\images\collections\genres, file: config/collections/genres/both.yaml}
+    - {template_variables: {section: '07'}, asset_directory: C:\Users\Derek\Library\images\collections\networks, file: config/collections/networks/networks.yaml}
+    - {template_variables: {section: '08'}, asset_directory: C:\Users\Derek\Library\images\collections\formats, file: config/collections/formats/shows.yaml}
+    - {template_variables: {section: '08'}, asset_directory: C:\Users\Derek\Library\images\collections\formats, file: config/collections/formats/both.yaml}
+    - {template_variables: {section: '09'}, asset_directory: C:\Users\Derek\Library\images\collections\people, file: config/collections/people/shows.yaml}
+    - {template_variables: {section: '09'}, asset_directory: C:\Users\Derek\Library\images\collections\people, file: config/collections/people/both.yaml}
+
+    metadata_files: C:\Users\Derek\Library\metadata\Shows.yaml
+    overlay_files:
+    - {file: config/overlays/shows.yaml}
+    - {file: config/overlays/both.yaml}
+    - {file: config/overlays/both.yaml, template_variables: {level: season}}
+    - {file: config/overlays/both.yaml, template_variables: {level: episode}}
+
+    report_path: config/reports/shows_report.yaml
+    settings:
+      asset_directory: C:\Users\Derek\Library\images\Shows
+
+    operations:
+      assets_for_all: true
+      delete_collections:
+        configured: false
+        managed: true
+      mass_genre_update: reset
+      mass_studio_update: tmdb
+      mass_originally_available_update: tmdb
+      mass_audience_rating_update: [imdb, tmdb]
+      mass_episode_audience_rating_update: [imdb, tmdb]
+      mass_critic_rating_update: mdb_metacritic
+      content_rating_mapper: {'Not Rated': NR}
 
 playlist_files:
-  file: /kometa/playlists/playlists.yaml
-  asset_directory: /images/playlists
-  template_variables: {libraries: [Movies, Shows]}
+  file: config/playlists/playlists.yaml
+  asset_directory: C:\Users\Derek\Library\images\playlists
+  template_variables:
+    libraries: [Movies, Shows]
 
 settings:
   run_order:
@@ -106,6 +124,7 @@ settings:
   cache_expiration: 60
 
   # Assets
+  asset_directory:
   asset_folders: true
   asset_depth: 2
   create_asset_folders: true
@@ -119,10 +138,9 @@ settings:
   # Collections
   sync_mode: sync
   minimum_items: 1
-  default_collection_order: release
+  default_collection_order: alpha
   delete_below_minimum: true
   delete_not_scheduled: false
-
   run_again_delay: 2
   missing_only_released: true
 
@@ -135,10 +153,9 @@ settings:
   show_missing_assets: false
 
   save_report: true
-  report_path: report/missing_report.yaml
   tvdb_language: eng
   playlist_sync_to_users: all
-  playlist_report: true
+  playlist_report: false
   verify_ssl: true
 
   overlay_artwork_filetype: jpg

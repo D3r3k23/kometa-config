@@ -1,71 +1,112 @@
 templates:
-  video:
-    default:
-      align: 15
-    optional:
-    - level
-    - hdr
-    - hdr_type
-    - dv
+  backdrop:
     overlay:
-      file: /images/overlays/video/<<overlay_name>>.png
-      group: video
-      weight: <<weight>>
-      horizontal_align: left
-      horizontal_offset: <<align>>
-      vertical_align: top
-      vertical_offset: <<align>>
-    builder_level: <<level>>
-    plex_search:
-      all:
-        resolution.regex: (?i)<<res>>
-        hdr: <<hdr>>
-    filters:
-      filepath.regex: (?i)\b<<hdr_type>>\b
-      has_dolby_vision: <<dv>>
-
-  audio:
-    default:
-    - align: 15
-    optional:
-    - level
-    overlay:
-      file: /images/overlays/audio/<<overlay_name>>.png
-      group: audio
-      weight: <<weight>>
-      horizontal_align: left
-      horizontal_offset: <<align>>
+      name: backdrop
+      back_color: '#00000099'
+      back_height: 100
       vertical_align: bottom
-      vertical_offset: <<align>>
-    builder_level: <<level>>
     plex_all: true
-    filters:
-      filepath.regex: (?i)\b<<codec>>(\b|\d)
 
-  format:
+  # recently_added
+  # recently_released
+
+  favorite:
     default:
-      align: 20
+      offset: 20
+    overlay:
+      name: Favorite
+      horizontal_align: left
+      horizontal_offset: <<offset>>
+      vertical_align: top
+      vertical_offset: <<offset>>
+
+  label:
+    plex_search: {all: {label: <<label>>}}
+
+  season_label:
+    plex_search: {all: {season_label: <<label>>}}
+    builder_level: season
+
+  episode_label:
+    plex_search: {all: {episode_label: <<label>>}}
+    builder_level: episode
+
+  source:
+    default:
+      offset: 20
     optional:
     - level
     overlay:
-      file: /images/overlays/format/<<overlay_name>>.png
+      name: <<overlay_name>>
       group: format
       weight: <<weight>>
       horizontal_align: center
-      vertical_align: top
-      vertical_offset: <<align>>
+      horizontal_offset: 0
+      vertical_align: bottom
+      vertical_offset: <<offset>>
     builder_level: <<level>>
     ignore_blank_results: true
     plex_all: true
     filters:
       filepath.regex: '(?i)\b(<<format>>)\b'
 
-  favorite:
+  audio:
     default:
-      align: 20
+      offset: 20
+    optional:
+    - level # season, episode
     overlay:
-      file: /images/overlays/Favorite.png
+      name: <<overlay_name>>
+      group: audio
+      weight: <<weight>>
       horizontal_align: right
-      horizontal_offset: <<align>>
+      horizontal_offset: <<offset>>
       vertical_align: bottom
-      vertical_offset: <<align>>
+      vertical_offset: <<offset>>
+    builder_level: <<level>>
+    ignore_blank_results: true
+    plex_all: true
+    filters:
+      filepath.regex: '(?i)\b(<<codec>>)(\b|\d)'
+
+  video:
+    default:
+      offset: 20
+    optional:
+    - level # season, episode
+    - dv # bool
+    - hdr # bool
+    - hdr10plus # bool
+    conditionals:
+      has_dv:
+        conditions:
+        - dv: true
+          value: true
+      has_hdr:
+        conditions:
+        - hdr: true
+          value: true
+        - hdr10plus: true
+          value: true
+      hdr_regex:
+        conditions:
+        - hdr10plus: true
+          value: 'HDR10(\+|P(lus)?)'
+    overlay:
+      name: <<overlay_name>>
+      group: video
+      weight: <<weight>>
+      horizontal_align: left
+      horizontal_offset: <<offset>>
+      vertical_align: bottom
+      vertical_offset: <<offset>>
+    builder_level: <<level>>
+    ignore_blank_results: true
+    plex_search:
+      all:
+        resolution.regex: (?i)<<res>>
+        hdr: <<has_hdr>>
+      validate: false
+    filters:
+      filepath.regex: '(?i)\b(<<hdr_regex>>)\b'
+      has_dolby_vision: <<has_dv>>

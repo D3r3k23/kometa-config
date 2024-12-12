@@ -1,0 +1,18 @@
+templates:
+  studio:
+    default:
+      section: '00'
+    sort_title: '!<<section>>-Studios <<collection_sort>>'
+    collection_order: release.desc
+    collection_mode: hide
+    minimum_items: 4
+    plex_search:
+      any:
+        studio.is: <<value>>
+
+dynamic_collections:
+  Studios:
+    type: studio
+    template: studio
+    title_format: '<<key_name>> Collection'
+    sync: true

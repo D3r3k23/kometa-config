@@ -1,9 +1,17 @@
-collections:
-  Collectionless:
-    plex_collectionless:
-      exclude_prefix:
-      - "!"
-      - "~"
-      exclude:
-      - Mad Max Collection
-      - Star Wars Collection
+templates:
+  comedian:
+    plex_search:
+      all: {actor: <<value>>}
+    collection_order: release.desc
+    item_label: <<value>>
+    tmdb_person: <<value>>
+
+dynamic_collections:
+  "Comedian":
+    type: actor
+    template: comedian
+    title_format: <<key_name>>
+    data:
+      depth: 1
+      minimum: 1
+    sync: true

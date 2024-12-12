@@ -1,0 +1,5 @@
+collections:
+  Refresh Metadata:
+    plex_all:
+      item_refresh: true
+      build_collection: false

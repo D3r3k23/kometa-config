@@ -1,69 +1,43 @@
-collections:
-  "Recommended by D3r3k":
-    template:
-      name: basic_collection
-      sort_prefix: "01"
-      order: random
-    trakt_list_details: https://trakt.tv/users/d3r3k23/lists/recommended-by-d3r3k
-    limit: 20
-    # smart_label:
-    #   limit: 20
-    #   all:
-    #     label: <<smart_label>>
-    #     unplayed: true
-    visible_library: true
-    visible_home: true
-    visible_shared: true
+templates:
+  actor:
+    default:
+      section: '00'
+    move_prefix: The, A, An
+    tmdb_person: <<mapping_name>>
+    name: <<mapping_name>> Collection
+    sort_title: '!<<section>>-People <<collection_sort>>'
+    label: People
+    collection_order: release.desc
+    collection_mode: hide
+    ignore_blank_results: true
+    plex_search:
+      all:
+        actor: tmdb
+      validate: false
 
-  "D3r3k's Trakt Recommended":
-    template:
-      name: basic_collection
-      sort_prefix: "02"
-    trakt_recommendations: 20
-    visible_library: true
-    visible_home: true
-
-  "D3r3k's Watchlist":
-    template:
-      name: basic_collection
-      sort_prefix: "03"
-    trakt_userlist: {userlist: watchlist, user: me}
-    visible_library: true
-    visible_home: true
-
-  "D3r3k's Favorites":
-    template:
-      name: basic_collection
-      sort_prefix: "04"
-    trakt_userlist: {userlist: favorites, user: me}
-    visible_library: true
-    visible_home: true
-    visible_shared: true
-
-  "IMDb Top 250":
-    template:
-      name: imdb_chart
-      sort_prefix: "05"
-      type: top
-    visible_library: true
-
-  "IMDb Popular":
-    template:
-      name: imdb_chart
-      sort_prefix: "06"
-      type: popular
-    visible_library: true
-
-  "Trakt Trending":
-    template:
-      name: basic_collection
-      sort_prefix: "07"
-    trakt_chart: {chart: trending, limit: 20}
-    visible_library: true
-
-  "Trakt Popular":
-    template:
-      name: basic_collection
-      sort_prefix: "08"
-    trakt_chart: {chart: popular, limit: 20}
-    visible_library: true
+  person:
+    optional:
+    - actor
+    - director
+    - producer
+    - writer
+    conditionals:
+      actor_search:   {conditions: [{actor: true, value: tmdb}]}
+      director_search: {conditions: [{director: true, value: tmdb}]}
+      producer_search: {conditions: [{producer: true, value: tmdb}]}
+      writer_search:  {conditions: [{writer: true, value: tmdb}]}
+    move_prefix: The, A, An
+    tmdb_person: <<id>>
+    name: <<mapping_name>> Collection
+    sort_title: '!08-People <<collection_sort>>'
+    label: People
+    collection_order: release.desc
+    collection_mode: hide
+    ignore_blank_results: true
+    plex_search:
+      any:
+        actor: <<actor_search>>
+        director: <<director_search>>
+        producer: <<producer_search>>
+        writer: <<writer_search>>
+      validate: false

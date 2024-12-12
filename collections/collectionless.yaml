@@ -1,0 +1,10 @@
+collections:
+  Collectionless:
+    sort_title: ~Collectionless
+    plex_collectionless:
+      exclude_prefix:
+      - "!"
+      - "~"
+      exclude:
+      - Mad Max Collection
+      - Star Wars Collection

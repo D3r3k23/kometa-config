@@ -1,0 +1,57 @@
+external_templates:
+- file: config/collections/seasonal/templates.yaml
+- file: config/collections/templates.yaml
+
+collections:
+  "New Year Movies":
+    template:
+    - {name: seasonal, range: 12/29-1/7, sort_prefix: '0101', order: audience_rating.desc}
+    - {name: tmdb_holiday, keyword: [new year, new year's day, new year's eve, new year's resolution]}
+  "Valentine's Day Movies":
+    template:
+    - {name: seasonal, range: 2/1-2/21, sort_prefix: '0214', order: audience_rating.desc}
+    - {name: tmdb_holiday, keyword: valentines day}
+  "St. Patrick's Day Movies":
+    template:
+    - {name: seasonal, range: 3/1-3/19, sort_prefix: '0317'}
+    - {name: imdb_list_id, list: ls063934595}
+  "Easter Movies":
+    template:
+    - {name: seasonal, range: 3/20-4/25, sort_prefix: '03020', order: audience_rating.desc}
+    - {name: imdb_list, list: [list_id: ls062665509, list_id: ls051733651]}
+  "Mother's Day Movies":
+    template:
+    - {name: seasonal, range: 5/5-5/15, sort_prefix: '0505'}
+    - {name: trakt_list, user: sympli, list: mothers-day-movies}
+  "Memorial Day Movies":
+    template:
+    - {name: seasonal, range: 5/16-5/31, sort_prefix: '0516'}
+    - {name: trakt_list, user: sympli, list: memorial-day-movies}
+  "Father's Day Movies":
+    template:
+    - {name: seasonal, range: 6/7-6/21, sort_prefix: '0607'}
+    - {name: trakt_list, user: sympli, list: fathers-day-movies}
+  "Independence Day Movies":
+    template:
+    - {name: seasonal, range: 6/22-7/11, sort_prefix: '0704'}
+    - {name: trakt_list, user: jpinilla712, list: 4th-of-july}
+  "9/11 - Never Forget":
+    template:
+    - {name: seasonal, range: 9/1-9/1, sort_prefix: '0911', order: audience_rating.desc}
+    - {name: tmdb_holiday, keyword: 9/11}
+  "Halloween Movies":
+    template:
+    - {name: seasonal, range: 10/1-10/31, sort_prefix: '1031'}
+    - {name: trakt_list, user: arod2980, list: halloween-movies}
+  "Veteran's Day Movies":
+    template:
+    - {name: seasonal, range: 11/1-11/14, sort_prefix: '1111'}
+    - {name: trakt_list, user: oldmankestis, list: veteran-s-day}
+  "Thanksgiving Movies":
+    template:
+    - {name: seasonal, range: 11/15-11/30, sort_prefix: '1115'}
+    - {name: trakt_list, user: francis-drake, list: thanksgiving}
+  "Christmas Movies":
+    template:
+    - {name: seasonal, range: 12/1-12/28, sort_prefix: '1225', order: audience_rating.desc}
+    - {name: tmdb_holiday, keyword: christmas}

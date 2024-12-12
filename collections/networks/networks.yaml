@@ -1,0 +1,31 @@
+templates:
+  network:
+    default:
+      section: '00'
+    name: '<<mapping_name>> Collection'
+    sort_title: '!<<section>>-Networks <<collection_sort>>'
+    label: Networks
+    collection_order: release.desc
+    collection_mode: hide
+    minimum_items: 2
+    plex_search:
+      any:
+        network.is: <<network>>
+      validate: false
+
+collections:
+  "Adult Swim":  {template: {name: network, network: [Adult Swim]}}
+  "AMC+":        {template: {name: network, network: [AMC, AMC+]}}
+  "Apple TV+":   {template: {name: network, network: [Apple TV+]}}
+  "BBC":         {template: {name: network, network: [BBC One, BBC Two]}}
+  "Disney+":     {template: {name: network, network: [Disney+]}}
+  "FOX":         {template: {name: network, network: [FOX, FX, FXX]}}
+  "HBO":         {template: {name: network, network: [HBO]}}
+  "History":     {template: {name: network, network: [History]}}
+  "Hulu":        {template: {name: network, network: [Hulu]}}
+  "Netflix":     {template: {name: network, network: [Netflix]}}
+  "Paramount+":  {template: {name: network, network: [Paramount+, Paramount Network, Paramount Pictures]}}
+  "Prime Video": {template: {name: network, network: [Prime Video]}}
+  "Showtime":    {template: {name: network, network: [Showtime]}}
+  "Syfy":        {template: {name: network, network: [Syfy]}}
+  "USA":         {template: {name: network, network: [USA Network]}}

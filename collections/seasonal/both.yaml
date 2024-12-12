@@ -1,0 +1,13 @@
+external_templates:
+- file: config/collections/seasonal/templates.yaml
+- file: config/collections/templates.yaml
+
+collections:
+  "May the Fourth Be With You":
+    template:
+    - {name: seasonal, range: 4/27-5/4, sort_prefix: '0504', order: user_rating.desc}
+    - {name: trakt_list, user: silvol, list: star-wars}
+  "D-Day (June 6, 1944)":
+    template:
+    - {name: seasonal, range: 6/1-6/6, sort_prefix: '0601', order: audience_rating.desc}
+    - {name: tmdb_holiday, keyword: world war ii}

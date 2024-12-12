@@ -1,0 +1,14 @@
+external_templates:
+- file: config/collections/series/templates.yaml
+
+collections:
+  "Band of Brothers Collection": {template: {name: trakt, user: sietsevdm, list: band-of-brothers}}
+  "The Men Who Built America":   {template: {name: trakt, user: d3r3k23, list: the-men-who-built-america, mode: hide_items}}
+  "Narcos Collection":           {template: {name: trakt, user: siskourso, list: narcos}}
+  "Planet Collection":           {template: {name: trakt, user: d3r3k23, list: planet-collection}}
+  "Star Wars Collection":        {template: {name: trakt, user: silvol, list: star-wars}}
+  "The World of Ice & Fire":     {template: {name: trakt, user: theimmortal68, list: world-of-ice-and-fire}}
+  "Yellowstone Collection":      {template: {name: trakt, user: lokix20, list: yellowstone}}
+
+  # "Blue Planet Collection": {mode: hide_items}
+  # "Planet Earth Collection": {mode: hide_items}

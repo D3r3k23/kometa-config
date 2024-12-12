@@ -1,9 +1,57 @@
+external_templates:
+- file: config/collections/charts/templates.yaml
+- file: config/collections/templates.yaml
+
 collections:
-  Collectionless:
-    plex_collectionless:
-      exclude_prefix:
-      - "!"
-      - "~"
-      exclude:
-      - Mad Max Collection
-      - Star Wars Collection
+# Tautulli
+  # "Popular on D3r3k's Server":
+  #   template:
+  #   - {name: basic, sort_prefix: '01', sort: Tautulli 01}
+  #   - {name: visible, library: true, home: true, shared: true}
+  #   tautulli_popular: {list_days: 90, list_size: 20}
+  # "Watched on D3r3k's Server":
+  #   template:
+  #   - {name: basic, sort_prefix: '01', sort: Tautulli 02}
+  #   - {name: visible, library: true, home: true, shared: true}
+  #   tautulli_watched: {list_days: 90, list_size: 20}
+
+  # IMDb
+  "IMDb Top 250":
+    template:
+    - {name: chart, sort_prefix: '03', sort: IMDb 01}
+    - {name: imdb_chart, type: top}
+    - {name: visible, library: true, home: true, shared: true}
+  "Popular on IMDb":
+    template:
+    - {name: chart, sort_prefix: '03', sort: IMDb 02}
+    - {name: imdb_chart, type: popular}
+    - {name: visible, library: true, home: true, shared: true}
+
+  # TMDb
+  "Top Rated on TMDb":
+    template:
+    - {name: chart, sort_prefix: '04', sort: TMDb 01}
+    - {name: visible, library: true, home: true, shared: true}
+    tmdb_top_rated: 250
+  "Popular on TMDb":
+    template:
+    - {name: chart, sort_prefix: '04', sort: TMDb 02}
+    - {name: visible, library: true, home: true, shared: true}
+    tmdb_popular: 200
+  "Trending on TMDb":
+    template:
+    - {name: chart, sort_prefix: '04', sort: TMDb 03}
+    - {name: visible, library: true, home: true, shared: true}
+    tmdb_trending_weekly: 150
+
+  # Trakt
+  "Popular on Trakt":
+    template:
+    - {name: chart, sort_prefix: '05', sort: Trakt 01}
+    - {name: visible, library: true, home: true, shared: true}
+    trakt_chart: {chart: popular, limit: 100, time_period: monthly}
+  "Trending on Trakt":
+    template:
+    - {name: chart, sort_prefix: '05', sort: Trakt 02}
+    - {name: visible, library: true, home: true, shared: true}
+    trakt_chart: {chart: trending, limit: 150}

@@ -1,0 +1,8 @@
+external_templates:
+- file: config/collections/people/templates.yaml
+
+collections:
+  "David Attenborough": {template: {name: actor}}
+  "Kevin Costner":     {template: {name: actor}}
+  "Jeremy Clarkson":  {template: {name: actor}}
+  "Shane Gillis":    {template: {name: actor}}

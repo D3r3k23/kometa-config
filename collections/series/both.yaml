@@ -1,9 +1,11 @@
+external_templates:
+- file: config/collections/series/templates.yaml
+
 collections:
-  Collectionless:
-    plex_collectionless:
-      exclude_prefix:
-      - "!"
-      - "~"
-      exclude:
-      - Mad Max Collection
-      - Star Wars Collection
+  "Batman Collection":       {template: {name: trakt, user: d3r3k23, list: batman}}
+  "Breaking Bad Collection": {template: {name: trakt, user: all11, list: breaking-bad}}
+  "DC Universe":             {template: {name: trakt, user: d3r3k23, list: dc-universe}}
+  "Dune Collection":         {template: {name: trakt, user: astrolansen, list: dune, order: alpha}}
+  "Jack Reacher Collection": {template: {name: trakt, user: krissykk, list: jack-reacher-series}}
+  "Jack Ryan Collection":    {template: {name: trakt, user: bruinschris, list: jack-ryan}}
+  "Twin Peaks Collection":   {template: {name: trakt, user: effyisoffline, list: twin-peaks-collection}}

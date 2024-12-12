@@ -1,0 +1,19 @@
+external_templates:
+- file: config/collections/people/templates.yaml
+
+collections:
+
+  # Directors
+  "Aaron Sorkin":      {template: {name: person, id: 13520, director: true, writer: true}}
+  "Christopher Nolan": {template: {name: person, id: 525, director: true}}
+  "Clint Eastwood":    {template: {name: person, id: 190, director: true, actor: true}}
+  "David Fincher":     {template: {name: person, id: 7467, director: true}}
+  "Denis Villeneuve":  {template: {name: person, id: 137427, director: true}}
+  "George Lucas":      {template: {name: person, id: 1, director: true, writer: true}}
+  "James Cameron":     {template: {name: person, id: 2710, director: true}}
+  "Kevin Costner":     {template: {name: person, id: 1269, director: true, actor: true}}
+  "Martin Scorsese":   {template: {name: person, id: 1032, director: true}}
+  "Quinten Tarantino": {template: {name: person, id: 138, director: true}}
+  "Ridley Scott":      {template: {name: person, id: 578, director: true}}
+  "Stanley Kubrick":   {template: {name: person, id: 240, director: true}}
+  "Steven Spielberg":  {template: {name: person, id: 488, director: true}}

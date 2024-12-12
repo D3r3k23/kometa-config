@@ -1,0 +1,124 @@
+templates:
+  # Recently Released
+  # Recently Added
+  # Recently Watched
+
+  recently_released:
+    default:
+      days: 365
+      limit: all
+    optional:
+    - episodes
+    conditionals:
+      release:
+        default: release
+        conditions:
+          episodes: true
+          value: episode_air_date
+    smart_filter:
+      all: {<<release>>: <<days>>}
+      sort_by: release.desc
+      limit: <<limit>>
+    visible_library: true
+    visible_home: true
+    visible_shared: true
+
+  recently_added:
+    default:
+      days: 60
+      limit: all
+    optional:
+    - episodes
+    conditionals:
+      added:
+        default: added
+        conditions:
+          episodes: true
+          value: episode_added
+    smart_filter:
+      all: {<<added>>: <<days>>}
+      sort_by: added.desc
+      limit: <<limit>>
+
+  recently_watched:
+    default:
+      days: 365
+      limit: all
+    optional:
+    - episodes
+    conditionals:
+      last_played:
+        default: last_plated
+        conditions:
+          episodes: true
+          value: episode_last_played
+    smart_filter:
+      all:
+        unplayed: false
+        <<last_played>>: <<days>>
+      sort_by: played.desc
+      limit: <<limit>>
+    visible_library: true
+    visible_home: true
+    visible_shared: true
+
+  top_rated:
+    default:
+      minimum: 7.5
+      limit: all
+    optional:
+    - year
+    - ongoing
+    conditionals:
+      returning:
+        conditions:
+          ongoing: true
+          value: returning
+    smart_filter:
+      all:
+        any:
+          user_rating.gte: <<minimum>>
+          audience_rating.gte: <<minimum>>
+        all:
+          year: <<year>>
+          tmdb_status: <<returning>>
+      sort_by: [user_rating.desc, audience_rating.desc]
+      limit: <<limit>>
+    visible_library: true
+    visible_home: true
+    visible_shared: true
+
+  visible:
+    default:
+      library: false
+      home: false
+      shared: false
+    visible_library: <<library>>
+    visible_home: <<home>>
+    visible_shared: <<shared>>
+
+  imdb_chart:
+    imdb_chart: <<type>>_<<library_type>>s
+
+  imdb_list:
+    imdb_list: <<list>>
+
+  imdb_list_id:
+    imdb_list: {list_id: <<list>>}
+
+  trakt_list:
+    trakt_list: https://trakt.tv/users/<<user>>/lists/<<list>>
+
+  letterboxd_list:
+    letterboxd_list: https://letterboxd.com/<<user>>/list/<<list>>
+
+  label_search:
+    plex_search: {all: {label: <<label>>}}
+
+  season_label_search:
+    plex_search: {all: {season_label: <<label>>}}
+    builder_level: season
+
+  episode_label_search:
+    plex_search: {all: {episode_label: <<label>>}}
+    builder_level: episode

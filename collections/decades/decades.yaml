@@ -1,0 +1,26 @@
+templates:
+  decade:
+    default:
+      section: '00'
+    conditionals:
+      search:
+        conditions:
+        - library_type: movie
+          value: decade
+        - library_type: show
+          value: year
+    sort_title: '!<<section>>-Decades <<collection_sort>>'
+    collection_order: audience_rating.desc
+    collection_mode: hide
+    minimum_items: 2
+    plex_search:
+      any:
+        <<search>>: <<value>>
+
+dynamic_collections:
+  # Section 3: Decades
+  Decades:
+    type: decade
+    template: decade
+    title_format: '<<key_name>> Collection'
+    sync: true

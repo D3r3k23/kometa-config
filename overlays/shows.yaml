@@ -1,71 +1,25 @@
-templates:
-  video:
-    default:
-      align: 15
-    optional:
-    - level
-    - hdr
-    - hdr_type
-    - dv
-    overlay:
-      file: /images/overlays/video/<<overlay_name>>.png
-      group: video
-      weight: <<weight>>
-      horizontal_align: left
-      horizontal_offset: <<align>>
-      vertical_align: top
-      vertical_offset: <<align>>
-    builder_level: <<level>>
-    plex_search:
-      all:
-        resolution.regex: (?i)<<res>>
-        hdr: <<hdr>>
-    filters:
-      filepath.regex: (?i)\b<<hdr_type>>\b
-      has_dolby_vision: <<dv>>
+external_templates:
+  file: config/overlays/templates.yaml
 
-  audio:
-    default:
-    - align: 15
-    optional:
-    - level
-    overlay:
-      file: /images/overlays/audio/<<overlay_name>>.png
-      group: audio
-      weight: <<weight>>
-      horizontal_align: left
-      horizontal_offset: <<align>>
-      vertical_align: bottom
-      vertical_offset: <<align>>
-    builder_level: <<level>>
-    plex_all: true
-    filters:
-      filepath.regex: (?i)\b<<codec>>(\b|\d)
+overlays:
+  "Show Backdrop":
+    template: {name: backdrop}
+  "Season Backdrop":
+    template: {name: backdrop}
+    builder_level: season
+  "Episode Backdrop":
+    template: {name: backdrop}
+    builder_level: episode
 
-  format:
-    default:
-      align: 20
-    optional:
-    - level
-    overlay:
-      file: /images/overlays/format/<<overlay_name>>.png
-      group: format
-      weight: <<weight>>
-      horizontal_align: center
-      vertical_align: top
-      vertical_offset: <<align>>
-    builder_level: <<level>>
-    ignore_blank_results: true
-    plex_all: true
-    filters:
-      filepath.regex: '(?i)\b(<<format>>)\b'
-
-  favorite:
-    default:
-      align: 20
-    overlay:
-      file: /images/overlays/Favorite.png
-      horizontal_align: right
-      horizontal_offset: <<align>>
-      vertical_align: bottom
-      vertical_offset: <<align>>
+  "Favorite Show":
+    template:
+    - {name: favorite}
+    - {name: label, label: Favorite}
+  "Favorite Season":
+    template:
+    - {name: favorite}
+    - {name: season_label, label: Favorite}
+  "Favorite Episode":
+    template:
+    - {name: favorite}
+    - {name: episode_label, label: Favorite}

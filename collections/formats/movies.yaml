@@ -1,0 +1,23 @@
+external_templates:
+- file: config/collections/formats/templates.yaml
+- file: config/collections/templates.yaml
+
+collections:
+  "IMAX Edition Collection":
+    template:
+    - {name: format, sort_prefix: '05', sort: Edition 01}
+    - {name: edition_search, contains: Imax}
+  # Extended Edition Collection
+  # Director's Cut Collection
+  # Final Cut Collection
+  # Ultimate Cut Collection
+  # Special Edition Collection
+  # Remaster Collection
+  # Uncensored Edition Collection
+  # Unrated Edition Collection
+  # Uncut Edition Collection
+  # Open Matte Edition Collection
+  "B&W Edition Collection":
+    template:
+    - {name: format, sort_prefix: '05', sort: Edition 02}
+    - {name: edition_search, contains: [Black & White, Black & Chrome, Noir]}

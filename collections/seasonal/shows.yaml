@@ -1,0 +1,24 @@
+external_templates:
+- file: config/collections/seasonal/templates.yaml
+- file: config/collections/templates.yaml
+
+collections:
+  "Halloween Episodes":
+    template:
+    - {name: seasonal, range: 10/1-10/31, sort_prefix: '02', order: audience_rating.desc}
+    - {name: trakt_list, user: philrivers, list: halloween-tv-episodes}
+    builder_level: episode
+  "Veteran's Day Shows":
+    template:
+    - {name: seasonal, range: 11/1-11/14, sort_prefix: '1111'}
+    - {name: tmdb_holiday, keyword: world war ii}
+  "Thanksgiving Episodes":
+    template:
+    - {name: seasonal, range: 11/25-11/30, sort_prefix: '1115', order: audience_rating.desc}
+    - {name: trakt_list, user: philrivers, list: thanksgiving-tv-episodes}
+    builder_level: episode
+  "Christmas Episodes":
+    template:
+    - {name: seasonal, range: 12/1-12/28, sort_prefix: '1225', order: audience_rating.desc}
+    - {name: trakt_list, user: philrivers, list: christmas-episodes}
+    builder_level: episode
