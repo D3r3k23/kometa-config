@@ -6,6 +6,7 @@ services:
     environment:
       - TZ=TIMEZONE #optional
       - KOMETA_CONFIG=/media-library/kometa/config.yaml
+      - KOMETA_TIMES=06:00
     volumes:
       - /mnt/user/appdata/kometa/config:/config:rw
       - /mnt/user/media-library:/library
