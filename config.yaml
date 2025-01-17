@@ -1,10 +1,8 @@
 libraries:
   Comedy:
     collection_files:
-    - file: /kometa/collections/comedy/comedians.yaml
-      asset_directory: /images/Collections/people
-    - file: /kometa/collections/comedy/comedy.yaml
-      asset_directory: /images/Collections/comedy
+    - {asset_directory: /images/collections/comedy, file: /kometa/collections/comedy/comedy.yaml}
+    - {asset_directory: /images/collections/people, file: /kometa/collections/comedy/comedians.yaml}
 
     metadata_files: /metadata/comedy.yaml
     report_path: /kometa/reports/comedy_report.yaml
@@ -13,9 +11,7 @@ libraries:
 
     operations:
       assets_for_all: true
-      delete_collections:
-        configured: false
-        managed: true
+      delete_collections: {configured: false, managed: true}
       mass_genre_update: Stand-Up Comedy
       mass_studio_update: tmdb
       mass_originally_available_update: tmdb
@@ -25,9 +21,22 @@ libraries:
 
   Movies:
     collection_files:
+    - {file: /kometa/collections/prerolls.yaml, schedule: weekly(monday)}
+
+    # - {file: /kometa/labels/reset.yaml}
+    # - {file: /kometa/labels/audio/audio.yaml}
+    # - {file: /kometa/labels/editions/editions.yaml}
+    # - {file: /kometa/labels/favorites/movies.yaml}
+    # - {file: /kometa/labels/favorites/both.yaml}
+    # - {file: /kometa/labels/genres/movies.yaml}
+    # - {file: /kometa/labels/genres/both.yaml}
+    # - {file: /kometa/labels/source/sources.yaml}
+    # - {file: /kometa/labels/tags/tags.yaml}
+
     - {template_variables: {section: '01'}, asset_directory: /images/collections/basic, file: /kometa/collections/basic/movies.yaml}
     - {template_variables: {section: '01'}, asset_directory: /images/collections/basic, file: /kometa/collections/basic/both.yaml}
     - {template_variables: {section: '02'}, asset_directory: /images/collections/seasonal, file: /kometa/collections/seasonal/movies.yaml}
+    - {template_variables: {section: '02'}, asset_directory: /images/collections/seasonal, file: /kometa/collections/seasonal/both.yaml}
     - {template_variables: {section: '03'}, asset_directory: /images/collections/charts, file: /kometa/collections/charts/movies.yaml}
     - {template_variables: {section: '03'}, asset_directory: /images/collections/charts, file: /kometa/collections/charts/both.yaml}
     - {template_variables: {section: '04'}, asset_directory: /images/collections/series, file: /kometa/collections/series/movies.yaml}
@@ -40,6 +49,7 @@ libraries:
     - {template_variables: {section: '08'}, asset_directory: /images/collections/formats, file: /kometa/collections/formats/both.yaml}
     - {template_variables: {section: '09'}, asset_directory: /images/collections/people, file: /kometa/collections/people/movies.yaml}
     - {template_variables: {section: '09'}, asset_directory: /images/collections/people, file: /kometa/collections/people/both.yaml}
+    - {asset_directory: /images/collections, file: /kometa/collections/collectionless.yaml}
 
     metadata_files: /metadata/movies.yaml
     overlay_files:
@@ -52,9 +62,7 @@ libraries:
 
     operations:
       assets_for_all: true
-      delete_collections:
-        configured: false
-        managed: true
+      delete_collections: {configured: false, managed: true}
       mass_genre_update: reset
       mass_studio_update: tmdb
       mass_originally_available_update: tmdb
@@ -63,9 +71,20 @@ libraries:
 
   Shows:
     collection_files:
+    # - {file: /kometa/labels/reset.yaml}
+    # - {file: /kometa/labels/audio/audio.yaml}
+    # - {file: /kometa/labels/editions/editions.yaml}
+    # - {file: /kometa/labels/favorites/shows.yaml}
+    # - {file: /kometa/labels/favorites/both.yaml}
+    # - {file: /kometa/labels/genres/shows.yaml}
+    # - {file: /kometa/labels/genres/both.yaml}
+    # - {file: /kometa/labels/source/sources.yaml}
+    # - {file: /kometa/labels/tags/tags.yaml}
+
     - {template_variables: {section: '01'}, asset_directory: /images/collections/basic, file: /kometa/collections/basic/shows.yaml}
     - {template_variables: {section: '01'}, asset_directory: /images/collections/basic, file: /kometa/collections/basic/both.yaml}
     - {template_variables: {section: '02'}, asset_directory: /images/collections/seasonal, file: /kometa/collections/seasonal/shows.yaml}
+    - {template_variables: {section: '02'}, asset_directory: /images/collections/seasonal, file: /kometa/collections/seasonal/both.yaml}
     - {template_variables: {section: '03'}, asset_directory: /images/collections/charts, file: /kometa/collections/charts/shows.yaml}
     - {template_variables: {section: '03'}, asset_directory: /images/collections/charts, file: /kometa/collections/charts/both.yaml}
     - {template_variables: {section: '04'}, asset_directory: /images/collections/series, file: /kometa/collections/series/shows.yaml}
@@ -78,6 +97,7 @@ libraries:
     - {template_variables: {section: '08'}, asset_directory: /images/collections/formats, file: /kometa/collections/formats/both.yaml}
     - {template_variables: {section: '09'}, asset_directory: /images/collections/people, file: /kometa/collections/people/shows.yaml}
     - {template_variables: {section: '09'}, asset_directory: /images/collections/people, file: /kometa/collections/people/both.yaml}
+    - {asset_directory: /images/collections, file: /kometa/collections/collectionless.yaml}
 
     metadata_files: /metadata/shows.yaml
     overlay_files:
@@ -92,9 +112,7 @@ libraries:
 
     operations:
       assets_for_all: true
-      delete_collections:
-        configured: false
-        managed: true
+      delete_collections: {configured: false, managed: true}
       mass_genre_update: reset
       mass_studio_update: tmdb
       mass_originally_available_update: tmdb

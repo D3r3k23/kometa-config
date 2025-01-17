@@ -1,0 +1,11 @@
+version: "3.2"
+services:
+  kometa:
+    image: kometateam/kometa
+    container_name: kometa
+    environment:
+      - TZ=TIMEZONE #optional
+      - KOMETA_CONFIG=/config/config.yaml
+    volumes:
+      - /mnt/user/home/kometa:/config
+    restart: unless-stopped
