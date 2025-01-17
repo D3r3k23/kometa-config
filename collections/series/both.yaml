@@ -1,7 +1,11 @@
 external_templates:
+- file: config/collections/templates.yaml
 - file: config/collections/series/templates.yaml
 
 collections:
+  "Series Collections":
+    template: {name: separator}
+
   "Batman Collection":       {template: {name: trakt, user: d3r3k23, list: batman}}
   "Breaking Bad Collection": {template: {name: trakt, user: all11, list: breaking-bad}}
   "DC Universe":             {template: {name: trakt, user: d3r3k23, list: dc-universe}}

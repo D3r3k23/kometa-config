@@ -6,11 +6,9 @@ collections:
   "Letterboxd Top 250":
     template:
     - {name: chart, sort_prefix: '06', sort: Letterboxd 01}
-    - {name: visible, library: true, home: true, shared: true}
     - {name: letterboxd_list, user: dave, list: official-top-250-narrative-feature-films}
 
   "Roger Ebert's Great Movies":
     template:
     - {name: chart, sort_prefix: '06', sort: Letterboxd 02}
-    - {name: visible, library: true, home: true, shared: true}
     - {name: letterboxd_list, user: dvideostor, list: roger-eberts-great-movies}

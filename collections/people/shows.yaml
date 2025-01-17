@@ -1,8 +1,30 @@
 external_templates:
+- file: config/collections/templates.yaml
 - file: config/collections/people/templates.yaml
 
 collections:
   "David Attenborough": {template: {name: actor}}
   "Kevin Costner":     {template: {name: actor}}
-  "Jeremy Clarkson":  {template: {name: actor}}
-  "Shane Gillis":    {template: {name: actor}}
+  "Jeremy Clarkson": {template: {name: actor}}
+  "Pedro Pascal":  {template: {name: actor}}
+  "Shane Gillis": {template: {name: actor}}
+
+  "Cary Joji Fukunaga":
+    template:
+    - {name: trakt_list, user: D3r3k23, list: cary-joji-fukunaga-shows}
+    - {name: person0, tmdb: 87257}
+
+  "David Fincher":
+    template:
+    - {name: trakt_list, user: D3r3k23, list: david-fincher-shows}
+    - {name: person0, tmdb: 7467}
+
+  "Ken Burns":
+    template:
+    - {name: trakt_list, user: steveach, list: ken-burns} # The National Parks
+    - {name: person0, tmdb: 204484}
+
+  "Philip K. Dick":
+    template:
+    - {name: trakt_list, user: malboro, list: philip-k-dick}
+    - {name: person0, tmdb: 584}

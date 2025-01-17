@@ -17,7 +17,7 @@ collections:
     - {name: imdb_list_id, list: ls063934595}
   "Easter Movies":
     template:
-    - {name: seasonal, range: 3/20-4/25, sort_prefix: '03020', order: audience_rating.desc}
+    - {name: seasonal, range: 3/20-4/25, sort_prefix: '0320', order: audience_rating.desc}
     - {name: imdb_list, list: [list_id: ls062665509, list_id: ls051733651]}
   "Mother's Day Movies":
     template:
@@ -35,9 +35,11 @@ collections:
     template:
     - {name: seasonal, range: 6/22-7/11, sort_prefix: '0704'}
     - {name: trakt_list, user: jpinilla712, list: 4th-of-july}
-  "9/11 - Never Forget":
+  # Judgement Day
+    # August 29
+  "9/11: Never Forget":
     template:
-    - {name: seasonal, range: 9/1-9/1, sort_prefix: '0911', order: audience_rating.desc}
+    - {name: seasonal, range: 9/1-9/11, sort_prefix: '0911', order: audience_rating.desc}
     - {name: tmdb_holiday, keyword: 9/11}
   "Halloween Movies":
     template:

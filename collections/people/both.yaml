@@ -1,41 +1,39 @@
 external_templates:
+- file: config/collections/templates.yaml
 - file: config/collections/people/templates.yaml
 
 collections:
-  # Movies
-  "Al Pacino":             {template: {name: actor}}
-  "Arnold Schwarzenegger": {template: {name: actor}}
-  "Brad Pitt":             {template: {name: actor}}
-  "Christian Bale":        {template: {name: actor}}
-  "Christoph Waltz":       {template: {name: actor}}
-  "Jack Nicholson":        {template: {name: actor}}
-  "Jake Gyllenhaal":       {template: {name: actor}}
-  "John Wayne":            {template: {name: actor}}
-  "Joaquin Phoenix":       {template: {name: actor}}
-  "Keanu Reeves":          {template: {name: actor}}
-  "Leonardo DiCaprio":     {template: {name: actor}}
-  "Liam Neeson":           {template: {name: actor}}
-  "Matt Damon":            {template: {name: actor}}
-  "Michael Fassbender":    {template: {name: actor}}
-  "Michael Caine":         {template: {name: actor}}
-  "Robert De Niro":        {template: {name: actor}}
-  "Russell Crowe":         {template: {name: actor}}
-  "Ryan Gosling":          {template: {name: actor}}
-  "Samuel L. Jackson":     {template: {name: actor}}
-  "Tom Cruise":            {template: {name: actor}}
-  "Tom Hanks":             {template: {name: actor}}
-  "Tom Hardy":             {template: {name: actor}}
+  "People Collections":
+    template: {name: separator}
 
-  # Both
-  # Actors
   "Anthony Hopkins":     {template: {name: actor}}
+  "Anya Taylor-Joy":     {template: {name: actor}}
   "Colin Farrell":       {template: {name: actor}}
   "Cillian Murphy":      {template: {name: actor}}
+  "Diego Luna":          {template: {name: actor}}
+  "Emma Stone":          {template: {name: actor}}
   "Harrison Ford":       {template: {name: actor}}
   "Henry Cavill":        {template: {name: actor}}
+  "Jason Bateman":       {template: {name: actor}}
+  "Jeffrey Wright":      {template: {name: actor}}
+  "Jonah Hill":          {template: {name: actor}}
   "Kevin Spacey":        {template: {name: actor}}
+  "Mads Mikkelsen":      {template: {name: actor}}
   "Matthew McConaughey": {template: {name: actor}}
+  "Michael Fassbender":  {template: {name: actor}}
+  "Michael Ironside":    {template: {name: actor}}
   "Sean Bean":           {template: {name: actor}}
   "Stellan Skarsgård":   {template: {name: actor}}
   "Steve Buscemi":       {template: {name: actor}}
   "Sylvester Stallone":  {template: {name: actor}}
+  "Tom Hanks":           {template: {name: actor}}
+  "Tom Hardy":           {template: {name: actor}}
+  "Woody Harrelson":     {template: {name: actor}}
+
+  # "Hans Zimmer":
+  # "Jóhann Jóhannsson":
+
+  "Trent Reznor":
+    template:
+    - {name: trakt_list, user: jekupka, list: scored-by-the-null-corporation}
+    - {name: person0, tmdb: 3186}

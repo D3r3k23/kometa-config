@@ -3,6 +3,9 @@ external_templates:
 - file: config/collections/templates.yaml
 
 collections:
+  "Format Collections":
+    template: {name: separator}
+
   # Source
   "Remux Collection":
     template:

@@ -18,9 +18,9 @@ templates:
     - tvdb_genre: <<tvdb_genre>>
     - tmdb_keyword: <<tmdb_keyword>>
     - imdb_keyword: <<imdb_keyword>>
-    ignore_blank_results: true
-    collection_order: alpha
+    collection_order: audience_rating.desc
     collection_mode: hide
+    ignore_blank_results: true
 
   subgenre:
     default:
@@ -30,6 +30,7 @@ templates:
     - tvdb_genre
     - tmdb_keyword
     - imdb_keyword
+    - tmdb_type
     name: <<mapping_name>> Collection
     sort_title: '!<<section>>-Genres <<collection_sort>>'
     label: Genres
@@ -40,6 +41,7 @@ templates:
     - tvdb_genre: <<tvdb_genre>>
     - tmdb_keyword: <<tmdb_keyword>>
     - imdb_keyword: <<imdb_keyword>>
-    ignore_blank_results: true
-    collection_order: alpha
+    - tmdb_type: <<tmdb_type>>
+    collection_order: audience_rating.desc
     collection_mode: hide
+    ignore_blank_results: true

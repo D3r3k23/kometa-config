@@ -4,9 +4,11 @@ external_templates:
 templates:
   comedy:
     default:
+      section: '00'
       sort_prefix: '00'
       sort: <<collection_sort>>
-    sort_title: '!<<sort_prefix>> <<sort>>'
+    sort_title: '!<<section>>-Comedy <<sort_prefix>> <<sort>>'
+    label: Comedy
     collection_mode: hide
 
 collections:
@@ -15,17 +17,18 @@ collections:
     - {name: comedy, sort_prefix: '01'}
     - {name: recently_released, days: 730}
 
-  "Top Rated Comedy Specials":
-    template:
-    - {name: comedy, sort_prefix: '02'}
-    - {name: top_rated, minimum: 7.5, limit: 25}
-
   "Recently Added":
     template:
-    - {name: comedy, sort_prefix: '03'}
+    - {name: comedy, sort_prefix: '02'}
     - {name: recently_added, days: 365, limit: 25}
 
-  # "Recently Watched":
-  #   template:
-  #   - {name: comedy, sort_prefix: '04'}
-  #   - {name: recently_watched, days: 365}
+  "Recently Watched":
+    template:
+    - {name: comedy, sort_prefix: '03'}
+    - {name: recently_watched, days: 365}
+
+  "Top Rated Comedy Specials":
+    template:
+    - {name: comedy, sort_prefix: '04'}
+    - {name: top_rated, minimum: 7.5, limit: 25}
+    - {name: visible, library: true, home: true, shared: true}

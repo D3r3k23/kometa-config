@@ -2,18 +2,58 @@ external_templates:
 - file: config/collections/people/templates.yaml
 
 collections:
+  # Actors
+  "Al Pacino":             {template: {name: actor}}
+  "Amy Adams":             {template: {name: actor}}
+  "Arnold Schwarzenegger": {template: {name: actor}}
+  "Ben Stiller":           {template: {name: actor}}
+  "Brad Pitt":             {template: {name: actor}}
+  "Christian Bale":        {template: {name: actor}}
+  "Christoph Waltz":       {template: {name: actor}}
+  "Jack Nicholson":        {template: {name: actor}}
+  "Jake Gyllenhaal":       {template: {name: actor}}
+  "Jessica Chastain":      {template: {name: actor}}
+  "John Wayne":            {template: {name: actor}}
+  "Joaquin Phoenix":       {template: {name: actor}}
+  "Keanu Reeves":          {template: {name: actor}}
+  "Leonardo DiCaprio":     {template: {name: actor}}
+  "Liam Neeson":           {template: {name: actor}}
+  "Margot Robbie":         {template: {name: actor}}
+  "Matt Damon":            {template: {name: actor}}
+  "Michael Caine":         {template: {name: actor}}
+  "Natalie Portman":       {template: {name: actor}}
+  "Robert De Niro":        {template: {name: actor}}
+  "Robert Downey Jr.":     {template: {name: actor}}
+  "Robin Williams":        {template: {name: actor}}
+  "Russell Crowe":         {template: {name: actor}}
+  "Ryan Gosling":          {template: {name: actor}}
+  "Samuel L. Jackson":     {template: {name: actor}}
+  "Scarlett Johansson":    {template: {name: actor}}
+  "Sigourney Weaver":      {template: {name: actor}}
+  "Tom Cruise":            {template: {name: actor}}
+  "Willem Dafoe":          {template: {name: actor}}
 
   # Directors
   "Aaron Sorkin":      {template: {name: person, id: 13520, director: true, writer: true}}
+  "Alex Garland":      {template: {name: person, id: 2036, director: true, writer: true}}
   "Christopher Nolan": {template: {name: person, id: 525, director: true}}
   "Clint Eastwood":    {template: {name: person, id: 190, director: true, actor: true}}
   "David Fincher":     {template: {name: person, id: 7467, director: true}}
   "Denis Villeneuve":  {template: {name: person, id: 137427, director: true}}
   "George Lucas":      {template: {name: person, id: 1, director: true, writer: true}}
   "James Cameron":     {template: {name: person, id: 2710, director: true}}
+  "John Ford":         {template: {name: person, id: 8500, director: true}}
+  "Ken Burns":         {template: {name: person, id: 204484, director: true}}
   "Kevin Costner":     {template: {name: person, id: 1269, director: true, actor: true}}
   "Martin Scorsese":   {template: {name: person, id: 1032, director: true}}
+  "Mel Gibson":        {template: {name: person, id: 2461, director: true, actor: true}}
+  "Oliver Stone":      {template: {name: person, id: 1152, director: true, actor: true}}
+  "Philip K. Dick":    {template: {name: person, id: 584, writer: true}}
   "Quinten Tarantino": {template: {name: person, id: 138, director: true}}
   "Ridley Scott":      {template: {name: person, id: 578, director: true}}
   "Stanley Kubrick":   {template: {name: person, id: 240, director: true}}
+  "Stephen King":      {template: {name: person, id: 3027, writer: true}}
   "Steven Spielberg":  {template: {name: person, id: 488, director: true}}
+
+  # "Howard Shore":
+  # "John Williams":

@@ -6,7 +6,7 @@ templates:
       order: custom
     optional:
     - range
-    # schedule: range(<<range>>)
+    schedule: range(<<range>>)
     delete_not_scheduled: true
     sort_title: '!<<section>>-Seasonal-<<sort_prefix>> <<collection_sort>>'
     label: Seasonal

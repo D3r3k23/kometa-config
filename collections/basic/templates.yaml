@@ -5,8 +5,11 @@ templates:
       sort_prefix: '>'
       sort: <<collection_sort>>
       order: custom
+    optional:
+    - level
     sort_title: '!<<section>>-Basic-<<sort_prefix>> <<sort>>'
     label: Basic
+    builder_level: <<level>>
     collection_order: <<order>>
     collection_mode: hide
     # content_rating: ''

@@ -17,8 +17,11 @@ collections:
 
   "Top Movies Released This Year":
     template:
-    - {name: recent, sort_prefix: '07'}
-    - {name: top_rated, year: <<current_year>>, limit: 10}
+    - {name: basic, sort_prefix: '07'}
+    - {name: visible, library: true, home: true, shared: true}
+    - {name: top_rated, year: <<current_year>>, minimum: 7.0, limit: 10}
+
+  # Best 2000s Movies
 
   "Classic Movies":
     template:
@@ -27,8 +30,11 @@ collections:
     - {name: trakt_list, user: d3r3k23, list: classic-movies}
     item_label: Classic
 
-  # Fan Edit Collection
+  # Best 90s Movies
 
   # 80s Action Movies
-  # Best 90s Movies
-  # Best 2000s Movies
+
+  # Fan Edits
+
+  # UK Movies
+  # Foreign Language Movies

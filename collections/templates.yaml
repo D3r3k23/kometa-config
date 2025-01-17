@@ -1,8 +1,4 @@
 templates:
-  # Recently Released
-  # Recently Added
-  # Recently Watched
-
   recently_released:
     default:
       days: 365
@@ -10,14 +6,19 @@ templates:
     optional:
     - episodes
     conditionals:
-      release:
+      search:
         default: release
         conditions:
           episodes: true
           value: episode_air_date
+      sort:
+        default: release
+        conditions:
+          episodes: true
+          value: episode_release
     smart_filter:
-      all: {<<release>>: <<days>>}
-      sort_by: release.desc
+      all: {<<search>>: <<days>>}
+      sort_by: <<sort>>.desc
       limit: <<limit>>
     visible_library: true
     visible_home: true
@@ -37,8 +38,11 @@ templates:
           value: episode_added
     smart_filter:
       all: {<<added>>: <<days>>}
-      sort_by: added.desc
+      sort_by: <<added>>.desc
       limit: <<limit>>
+    visible_library: false
+    visible_home: false
+    visible_shared: false
 
   recently_watched:
     default:
@@ -48,19 +52,17 @@ templates:
     - episodes
     conditionals:
       last_played:
-        default: last_plated
+        default: last_played
         conditions:
           episodes: true
           value: episode_last_played
     smart_filter:
-      all:
-        unplayed: false
-        <<last_played>>: <<days>>
-      sort_by: played.desc
+      all: {<<last_played>>: <<days>>}
+      sort_by: viewed.desc
       limit: <<limit>>
     visible_library: true
-    visible_home: true
-    visible_shared: true
+    visible_home: false
+    visible_shared: false
 
   top_rated:
     default:
@@ -74,19 +76,25 @@ templates:
         conditions:
           ongoing: true
           value: returning
-    smart_filter:
+    plex_search:
       all:
         any:
           user_rating.gte: <<minimum>>
           audience_rating.gte: <<minimum>>
         all:
           year: <<year>>
-          tmdb_status: <<returning>>
       sort_by: [user_rating.desc, audience_rating.desc]
       limit: <<limit>>
-    visible_library: true
-    visible_home: true
-    visible_shared: true
+    filters:
+      tmdb_status: <<returning>>
+
+  separator:
+    default:
+      section: '00'
+    sort_title: '!<<section>> !Separator'
+    label: Separator
+    blank_collection: true
+    collection_mode: hide
 
   visible:
     default:

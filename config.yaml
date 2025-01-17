@@ -1,13 +1,14 @@
 libraries:
   Comedy:
     collection_files:
-    - {asset_directory: /images/collections/comedy, file: /kometa/collections/comedy/comedy.yaml}
-    - {asset_directory: /images/collections/people, file: /kometa/collections/comedy/comedians.yaml}
+    - {template_variables: {section: '01'}, asset_directory: /library/images/collections/comedy, file: /library/kometa/collections/comedy/comedy.yaml}
+    - {template_variables: {section: '02'}, asset_directory: /library/images/collections/decades, file: /library/kometa/collections/comedy/decades.yaml}
+    - {template_variables: {section: '03'}, asset_directory: /library/images/collections/people, file: /library/kometa/collections/comedy/comedians.yaml}
 
-    metadata_files: /metadata/comedy.yaml
-    report_path: /kometa/reports/comedy_report.yaml
+    metadata_files: /library/metadata/comedy.yaml
+    report_path: /library/kometa/reports/comedy_report.yaml
     settings:
-      asset_directory: /images/comedy
+      asset_directory: /library/images/comedy
 
     operations:
       assets_for_all: true
@@ -17,48 +18,51 @@ libraries:
       mass_originally_available_update: tmdb
       mass_audience_rating_update: [imdb, tmdb]
       mass_critic_rating_update: mdb_metacritic
+
       content_rating_mapper: {'Not Rated': NR}
+      mass_poster_update: tmdb
+      mass_background_update: tmdb
 
   Movies:
     collection_files:
-    - {file: /kometa/collections/prerolls.yaml, schedule: weekly(monday)}
+    - {file: /library/kometa/collections/prerolls.yaml, schedule: weekly(monday)}
 
-    # - {file: /kometa/labels/reset.yaml}
-    # - {file: /kometa/labels/audio/audio.yaml}
-    # - {file: /kometa/labels/editions/editions.yaml}
-    # - {file: /kometa/labels/favorites/movies.yaml}
-    # - {file: /kometa/labels/favorites/both.yaml}
-    # - {file: /kometa/labels/genres/movies.yaml}
-    # - {file: /kometa/labels/genres/both.yaml}
-    # - {file: /kometa/labels/source/sources.yaml}
-    # - {file: /kometa/labels/tags/tags.yaml}
+    # - {file: /library/kometa/labels/reset.yaml}
+    # - {file: /library/kometa/labels/audio/audio.yaml}
+    # - {file: /library/kometa/labels/editions/editions.yaml}
+    # - {file: /library/kometa/labels/favorites/shows.yaml}
+    # - {file: /library/kometa/labels/favorites/both.yaml}
+    # - {file: /library/kometa/labels/genres/shows.yaml}
+    # - {file: /library/kometa/labels/genres/both.yaml}
+    # - {file: /library/kometa/labels/source/sources.yaml}
+    # - {file: /library/kometa/labels/tags/tags.yaml}
 
-    - {template_variables: {section: '01'}, asset_directory: /images/collections/basic, file: /kometa/collections/basic/movies.yaml}
-    - {template_variables: {section: '01'}, asset_directory: /images/collections/basic, file: /kometa/collections/basic/both.yaml}
-    - {template_variables: {section: '02'}, asset_directory: /images/collections/seasonal, file: /kometa/collections/seasonal/movies.yaml}
-    - {template_variables: {section: '02'}, asset_directory: /images/collections/seasonal, file: /kometa/collections/seasonal/both.yaml}
-    - {template_variables: {section: '03'}, asset_directory: /images/collections/charts, file: /kometa/collections/charts/movies.yaml}
-    - {template_variables: {section: '03'}, asset_directory: /images/collections/charts, file: /kometa/collections/charts/both.yaml}
-    - {template_variables: {section: '04'}, asset_directory: /images/collections/series, file: /kometa/collections/series/movies.yaml}
-    - {template_variables: {section: '04'}, asset_directory: /images/collections/series, file: /kometa/collections/series/both.yaml}
-    - {template_variables: {section: '05'}, asset_directory: /images/collections/decades, file: /kometa/collections/decades/decades.yaml}
-    - {template_variables: {section: '06'}, asset_directory: /images/collections/genres, file: /kometa/collections/genres/movies.yaml}
-    - {template_variables: {section: '06'}, asset_directory: /images/collections/genres, file: /kometa/collections/genres/both.yaml}
-    - {template_variables: {section: '07'}, asset_directory: /images/collections/studios, file: /kometa/collections/studios/studios.yaml}
-    - {template_variables: {section: '08'}, asset_directory: /images/collections/formats, file: /kometa/collections/formats/movies.yaml}
-    - {template_variables: {section: '08'}, asset_directory: /images/collections/formats, file: /kometa/collections/formats/both.yaml}
-    - {template_variables: {section: '09'}, asset_directory: /images/collections/people, file: /kometa/collections/people/movies.yaml}
-    - {template_variables: {section: '09'}, asset_directory: /images/collections/people, file: /kometa/collections/people/both.yaml}
-    - {asset_directory: /images/collections, file: /kometa/collections/collectionless.yaml}
+    - {template_variables: {section: '01'}, asset_directory: /library/images/collections/basic, file: /library/kometa/collections/basic/movies.yaml}
+    - {template_variables: {section: '01'}, asset_directory: /library/images/collections/basic, file: /library/kometa/collections/basic/both.yaml}
+    - {template_variables: {section: '02'}, asset_directory: /library/images/collections/seasonal, file: /library/kometa/collections/seasonal/movies.yaml}
+    - {template_variables: {section: '02'}, asset_directory: /library/images/collections/seasonal, file: /library/kometa/collections/seasonal/both.yaml}
+    - {template_variables: {section: '03'}, asset_directory: /library/images/collections/charts, file: /library/kometa/collections/charts/movies.yaml}
+    - {template_variables: {section: '03'}, asset_directory: /library/images/collections/charts, file: /library/kometa/collections/charts/both.yaml}
+    - {template_variables: {section: '04'}, asset_directory: /library/images/collections/decades, file: /library/kometa/collections/decades/decades.yaml}
+    - {template_variables: {section: '05'}, asset_directory: /library/images/collections/series, file: /library/kometa/collections/series/movies.yaml}
+    - {template_variables: {section: '05'}, asset_directory: /library/images/collections/series, file: /library/kometa/collections/series/both.yaml}
+    - {template_variables: {section: '06'}, asset_directory: /library/images/collections/genres, file: /library/kometa/collections/genres/movies.yaml}
+    - {template_variables: {section: '06'}, asset_directory: /library/images/collections/genres, file: /library/kometa/collections/genres/both.yaml}
+    - {template_variables: {section: '07'}, asset_directory: /library/images/collections/studios, file: /library/kometa/collections/studios/studios.yaml}
+    - {template_variables: {section: '08'}, asset_directory: /library/images/collections/formats, file: /library/kometa/collections/formats/movies.yaml}
+    - {template_variables: {section: '08'}, asset_directory: /library/images/collections/formats, file: /library/kometa/collections/formats/both.yaml}
+    - {template_variables: {section: '09'}, asset_directory: /library/images/collections/people, file: /library/kometa/collections/people/movies.yaml}
+    - {template_variables: {section: '09'}, asset_directory: /library/images/collections/people, file: /library/kometa/collections/people/both.yaml}
+    # - {asset_directory: /library/collections, file: /library/kometa/collections/collectionless.yaml}
 
-    metadata_files: /metadata/movies.yaml
+    metadata_files: /library/metadata/movies.yaml
     overlay_files:
-    - file: /kometa/overlays/movies.yaml
-    - file: /kometa/overlays/both.yaml
+    - {file: /library/kometa/overlays/movies.yaml}
+    - {file: /library/kometa/overlays/both.yaml}
 
-    report_path: /kometa/reports/movies_report.yaml
+    report_path: /library/kometa/config/reports/movies_report.yaml
     settings:
-      asset_directory: /images/movies
+      asset_directory: /library/images/movies
 
     operations:
       assets_for_all: true
@@ -69,46 +73,50 @@ libraries:
       mass_audience_rating_update: [imdb, tmdb]
       mass_critic_rating_update: mdb_metacritic
 
+      content_rating_mapper: {'Not Rated': NR}
+      mass_poster_update: tmdb
+      mass_background_update: tmdb
+
   Shows:
     collection_files:
-    # - {file: /kometa/labels/reset.yaml}
-    # - {file: /kometa/labels/audio/audio.yaml}
-    # - {file: /kometa/labels/editions/editions.yaml}
-    # - {file: /kometa/labels/favorites/shows.yaml}
-    # - {file: /kometa/labels/favorites/both.yaml}
-    # - {file: /kometa/labels/genres/shows.yaml}
-    # - {file: /kometa/labels/genres/both.yaml}
-    # - {file: /kometa/labels/source/sources.yaml}
-    # - {file: /kometa/labels/tags/tags.yaml}
+    # - {file: /library/kometa/labels/reset.yaml}
+    # - {file: /library/kometa/labels/audio/audio.yaml}
+    # - {file: /library/kometa/labels/editions/editions.yaml}
+    # - {file: /library/kometa/labels/favorites/shows.yaml}
+    # - {file: /library/kometa/labels/favorites/both.yaml}
+    # - {file: /library/kometa/labels/genres/shows.yaml}
+    # - {file: /library/kometa/labels/genres/both.yaml}
+    # - {file: /library/kometa/labels/source/sources.yaml}
+    # - {file: /library/kometa/labels/tags/tags.yaml}
 
-    - {template_variables: {section: '01'}, asset_directory: /images/collections/basic, file: /kometa/collections/basic/shows.yaml}
-    - {template_variables: {section: '01'}, asset_directory: /images/collections/basic, file: /kometa/collections/basic/both.yaml}
-    - {template_variables: {section: '02'}, asset_directory: /images/collections/seasonal, file: /kometa/collections/seasonal/shows.yaml}
-    - {template_variables: {section: '02'}, asset_directory: /images/collections/seasonal, file: /kometa/collections/seasonal/both.yaml}
-    - {template_variables: {section: '03'}, asset_directory: /images/collections/charts, file: /kometa/collections/charts/shows.yaml}
-    - {template_variables: {section: '03'}, asset_directory: /images/collections/charts, file: /kometa/collections/charts/both.yaml}
-    - {template_variables: {section: '04'}, asset_directory: /images/collections/series, file: /kometa/collections/series/shows.yaml}
-    - {template_variables: {section: '04'}, asset_directory: /images/collections/series, file: /kometa/collections/series/both.yaml}
-    - {template_variables: {section: '05'}, asset_directory: /images/collections/decades, file: /kometa/collections/decades/decades.yaml}
-    - {template_variables: {section: '06'}, asset_directory: /images/collections/genres, file: /kometa/collections/genres/shows.yaml}
-    - {template_variables: {section: '06'}, asset_directory: /images/collections/genres, file: /kometa/collections/genres/both.yaml}
-    - {template_variables: {section: '07'}, asset_directory: /images/collections/networks, file: /kometa/collections/networks/networks.yaml}
-    - {template_variables: {section: '08'}, asset_directory: /images/collections/formats, file: /kometa/collections/formats/shows.yaml}
-    - {template_variables: {section: '08'}, asset_directory: /images/collections/formats, file: /kometa/collections/formats/both.yaml}
-    - {template_variables: {section: '09'}, asset_directory: /images/collections/people, file: /kometa/collections/people/shows.yaml}
-    - {template_variables: {section: '09'}, asset_directory: /images/collections/people, file: /kometa/collections/people/both.yaml}
-    - {asset_directory: /images/collections, file: /kometa/collections/collectionless.yaml}
+    - {template_variables: {section: '01'}, asset_directory: /library/images/collections/basic, file: /library/kometa/collections/basic/shows.yaml}
+    - {template_variables: {section: '01'}, asset_directory: /library/images/collections/basic, file: /library/kometa/collections/basic/both.yaml}
+    - {template_variables: {section: '02'}, asset_directory: /library/images/collections/seasonal, file: /library/kometa/collections/seasonal/shows.yaml}
+    - {template_variables: {section: '02'}, asset_directory: /library/images/collections/seasonal, file: /library/kometa/collections/seasonal/both.yaml}
+    - {template_variables: {section: '03'}, asset_directory: /library/images/collections/charts, file: /library/kometa/collections/charts/shows.yaml}
+    - {template_variables: {section: '03'}, asset_directory: /library/images/collections/charts, file: /library/kometa/collections/charts/both.yaml}
+    - {template_variables: {section: '04'}, asset_directory: /library/images/collections/decades, file: /library/kometa/collections/decades/decades.yaml}
+    - {template_variables: {section: '05'}, asset_directory: /library/images/collections/series, file: /library/kometa/collections/series/shows.yaml}
+    - {template_variables: {section: '05'}, asset_directory: /library/images/collections/series, file: /library/kometa/collections/series/both.yaml}
+    - {template_variables: {section: '06'}, asset_directory: /library/images/collections/genres, file: /library/kometa/collections/genres/shows.yaml}
+    - {template_variables: {section: '06'}, asset_directory: /library/images/collections/genres, file: /library/kometa/collections/genres/both.yaml}
+    - {template_variables: {section: '07'}, asset_directory: /library/images/collections/networks, file: /library/kometa/collections/networks/networks.yaml}
+    - {template_variables: {section: '08'}, asset_directory: /library/images/collections/formats, file: /library/kometa/collections/formats/shows.yaml}
+    - {template_variables: {section: '08'}, asset_directory: /library/images/collections/formats, file: /library/kometa/collections/formats/both.yaml}
+    - {template_variables: {section: '09'}, asset_directory: /library/images/collections/people, file: /library/kometa/collections/people/shows.yaml}
+    - {template_variables: {section: '09'}, asset_directory: /library/images/collections/people, file: /library/kometa/collections/people/both.yaml}
+    # - {asset_directory: /library/collections, file: /library/kometa/collections/collectionless.yaml}
 
-    metadata_files: /metadata/shows.yaml
+    metadata_files: /library/metadata/shows.yaml
     overlay_files:
-    - {file: /kometa/overlays/shows.yaml}
-    - {file: /kometa/overlays/both.yaml}
-    - {file: /kometa/overlays/both.yaml, template_variables: {level: season}}
-    - {file: /kometa/overlays/both.yaml, template_variables: {level: episode}}
+    - {file: /library/kometa/overlays/shows.yaml}
+    - {file: /library/kometa/overlays/both.yaml}
+    - {file: /library/kometa/overlays/both.yaml, template_variables: {level: season}}
+    - {file: /library/kometa/overlays/both.yaml, template_variables: {level: episode}}
 
-    report_path: /kometa/reports/shows_report.yaml
+    report_path: /library/kometa/reports/shows_report.yaml
     settings:
-      asset_directory: /images/shows
+      asset_directory: /library/images/shows
 
     operations:
       assets_for_all: true
@@ -120,9 +128,19 @@ libraries:
       mass_episode_audience_rating_update: [imdb, tmdb]
       mass_critic_rating_update: mdb_metacritic
 
+      content_rating_mapper: {'Not Rated': NR}
+      mass_poster_update:
+        source: tmdb
+        seasons: true
+        episodes: true
+      mass_background_update:
+        source: tmdb
+        seasons: true
+        episodes: true
+
 playlist_files:
-  file: /kometa/playlists/playlists.yaml
-  asset_directory: /images/playlists
+  file: /library/kometa/playlists/playlists.yaml
+  asset_directory: /library/images/playlists
   template_variables:
     libraries: [Movies, Shows]
 
@@ -174,7 +192,7 @@ settings:
   playlist_sync_to_users: all
   playlist_report: false
 
-  overlay_artwork_filetype: jpg
+  overlay_artwork_filetype: png
   overlay_artwork_quality: 95
   custom_repo:
 

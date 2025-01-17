@@ -15,6 +15,7 @@ templates:
       offset: 20
     overlay:
       name: Favorite
+      file: /library/images/overlays/tags/Favorite.png
       horizontal_align: left
       horizontal_offset: <<offset>>
       vertical_align: top
@@ -38,6 +39,7 @@ templates:
     - level
     overlay:
       name: <<overlay_name>>
+      file: /library/images/overlays/source/<<overlay_name>>.png
       group: format
       weight: <<weight>>
       horizontal_align: center
@@ -57,6 +59,7 @@ templates:
     - level # season, episode
     overlay:
       name: <<overlay_name>>
+      file: /library/images/overlays/audio/<<overlay_name>>.png
       group: audio
       weight: <<weight>>
       horizontal_align: right
@@ -94,6 +97,7 @@ templates:
           value: 'HDR10(\+|P(lus)?)'
     overlay:
       name: <<overlay_name>>
+      file: /library/images/overlays/video/<<overlay_name>>.png
       group: video
       weight: <<weight>>
       horizontal_align: left

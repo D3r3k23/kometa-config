@@ -13,7 +13,6 @@ templates:
     label: Series
     collection_order: <<order>>
     collection_mode: hide
-    minimum_items: 2
     filters: {edition: <<edition>>}
 
   trakt:
@@ -30,5 +29,4 @@ templates:
     label: Series
     collection_order: <<order>>
     collection_mode: hide
-    minimum_items: 2
     filters: {edition: <<edition>>}

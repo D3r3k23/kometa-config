@@ -8,7 +8,7 @@ collections:
   Animation:       {template: {name: genre, tmdb_genre: Animation}}
   Comedy:          {template: {name: genre, tmdb_genre: Comedy}}
   Crime:           {template: {name: genre, tmdb_genre: Crime}}
-  Biography:       {template: {name: genre, tmdb_keyword: [biography, biopic]}}
+  Biography:       {template: {name: genre, tmdb_keyword: [biography, biopic, fictional biography]}}
   Documentary:     {template: {name: genre, tmdb_genre: Documentary}}
   Drama:           {template: {name: genre, tmdb_genre: Drama}}
   Family:          {template: {name: genre, tmdb_genre: Family}}
@@ -17,18 +17,19 @@ collections:
   History:         {template: {name: genre, tmdb_genre: History}}
   Horror:          {template: {name: genre, tmdb_genre: Horror}}
   Indie:           {template: {name: genre, tmdb_keyword: indie}}
-  Kids:            {template: {name: genre, tmdb_keyword: [kids, children]}}
+  Kids:            {template: {name: genre, tmdb_keyword: kids}}
+  Martial Arts:    {template: {name: genre, tmdb_keyword: martial arts}}
   Music:           {template: {name: genre, tmdb_genre: Music}}
-  Musical:         {template: {name: genre, tmdb_keyword: musical}}
   Mystery:         {template: {name: genre, tmdb_genre: Mystery}}
   Romance:         {template: {name: genre, tmdb_genre: Romance}}
   Science Fiction: {template: {name: genre, tmdb_genre: Science Fiction}}
-  Sports:          {template: {name: genre, tmdb_keyword: [sport, sports]}}
-  Martial Arts:    {template: {name: genre, tmdb_keyword: martial arts}}
+  Sports:          {template: {name: genre, tmdb_keyword: [sport, sports, coach]}}
   Thriller:        {template: {name: genre, tmdb_genre: Thriller}}
   War:             {template: {name: genre, tmdb_genre: War}}
   Western:         {template: {name: genre, tmdb_genre: Western}}
 
   # Subgenres
-  Food:     {template: {name: subgenre, tmdb_keyword: [food, cooking]}}
-  Suspense: {template: {name: subgenre, tmdb_keyword: [suspense]}}
+  Food:              {template: {name: subgenre, tmdb_keyword: [food, chef, cooking]}}
+  Musical:           {template: {name: subgenre, tmdb_keyword: musical}}
+  Spaghetti Western: {template: {name: subgenre, tmdb_keyword: spaghetti western}}
+  Suspense:          {template: {name: subgenre, tmdb_keyword: suspense}}

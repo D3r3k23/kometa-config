@@ -1,16 +1,19 @@
 templates:
   comedian:
-    plex_search:
-      all: {actor: <<value>>}
+    default:
+      section: '00'
+    sort_title: '!<<section>>-Comedians <<collection_sort>>'
     collection_order: release.desc
     item_label: <<value>>
     tmdb_person: <<value>>
+    plex_search:
+      all: {actor: <<value>>}
 
 dynamic_collections:
   "Comedian":
     type: actor
     template: comedian
-    title_format: <<key_name>>
+    title_format: <<key_name>> Collection
     data:
       depth: 1
       minimum: 1

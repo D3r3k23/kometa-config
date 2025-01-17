@@ -1,3 +1,6 @@
+external_templates:
+- file: config/collections/templates.yaml
+
 templates:
   decade:
     default:
@@ -12,13 +15,16 @@ templates:
     sort_title: '!<<section>>-Decades <<collection_sort>>'
     collection_order: audience_rating.desc
     collection_mode: hide
-    minimum_items: 2
+    minimum_items: 1
     plex_search:
       any:
         <<search>>: <<value>>
 
+collections:
+  "Decade Collections":
+    template: {name: separator}
+
 dynamic_collections:
-  # Section 3: Decades
   Decades:
     type: decade
     template: decade

@@ -8,10 +8,10 @@ collections:
     - {name: recent, sort_prefix: '01', sort: Recent 02}
     - {name: recently_added, days: 60, limit: 100}
 
-  # "Recently Watched":
-  #   template:
-  #   - {name: recent, sort_prefix: '01', sort: Recent 03}
-  #   - {name: recently_watched, days: 180}
+  "Recently Watched":
+    template:
+    - {name: recent, sort_prefix: '01', sort: Recent 03}
+    - {name: recently_watched, days: 180, limit: 100}
 
   "Next on Watchlist":
     template:
@@ -35,7 +35,7 @@ collections:
     template:
     - {name: basic, sort_prefix: '04'}
     - {name: visible, library: true, home: true}
-    trakt_recommendations: 20
+    trakt_recommendations: 60
 
   "Recommended by D3r3k":
     template:

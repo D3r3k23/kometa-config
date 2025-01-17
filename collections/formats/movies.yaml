@@ -3,21 +3,51 @@ external_templates:
 - file: config/collections/templates.yaml
 
 collections:
-  "IMAX Edition Collection":
+  "Extended Edition Collection":
     template:
     - {name: format, sort_prefix: '05', sort: Edition 01}
-    - {name: edition_search, contains: Imax}
-  # Extended Edition Collection
-  # Director's Cut Collection
-  # Final Cut Collection
-  # Ultimate Cut Collection
-  # Special Edition Collection
-  # Remaster Collection
-  # Uncensored Edition Collection
-  # Unrated Edition Collection
-  # Uncut Edition Collection
-  # Open Matte Edition Collection
-  "B&W Edition Collection":
+    - {name: edition_search, contains: Extended}
+  "Special Edition Collection":
     template:
     - {name: format, sort_prefix: '05', sort: Edition 02}
+    - {name: edition_search, contains: Special}
+  "Director's Cut Collection":
+    template:
+    - {name: format, sort_prefix: '05', sort: Edition 03}
+    - {name: edition_search, contains: Director's}
+  "Final Cut Collection":
+    template:
+    - {name: format, sort_prefix: '05', sort: Edition 04}
+    - {name: edition_search, contains: Final Cut}
+  "Ultimate Cut Collection":
+    template:
+    - {name: format, sort_prefix: '05', sort: Edition 05}
+    - {name: edition_search, contains: Ultimate Cut}
+  "Redux Edition Collection":
+    template:
+    - {name: format, sort_prefix: '05', sort: Edition 06}
+    - {name: edition_search, contains: Redux}
+  "Remastered Collection":
+    template:
+    - {name: format, sort_prefix: '05', sort: Edition 07}
+    - {name: edition_search, contains: Remaster}
+  "Unrated Collection":
+    template:
+    - {name: format, sort_prefix: '05', sort: Edition 08}
+    - {name: edition_search, contains: Unrated, Uncensored}
+  "Uncut Collection":
+    template:
+    - {name: format, sort_prefix: '05', sort: Edition 09}
+    - {name: edition_search, contains: Uncut}
+  "IMAX Edition Collection":
+    template:
+    - {name: format, sort_prefix: '05', sort: Edition 10}
+    - {name: edition_search, contains: Imax}
+  "Open Matte Edition Collection":
+    template:
+    - {name: format, sort_prefix: '05', sort: Edition 11}
+    - {name: edition_search, contains: Open Matte}
+  "B&W Edition Collection":
+    template:
+    - {name: format, sort_prefix: '05', sort: Edition 12}
     - {name: edition_search, contains: [Black & White, Black & Chrome, Noir]}

@@ -3,6 +3,7 @@ external_templates:
 
 collections:
   # TMDb
+  "The 28 Collection":                      {template: {name: tmdb, id: 1565, mode: hide_items}}
   "300 Collection":                         {template: {name: tmdb, id: 125570, mode: hide_items}}
   "The Accountant Collection":              {template: {name: tmdb, id: 870339, mode: hide_items}}
   "Airplane Collection":                    {template: {name: tmdb, id: 91663, mode: hide_items}}
@@ -16,29 +17,33 @@ collections:
   "The Bourne Collection":                  {template: {name: tmdb, id: 31562}}
   "Captain America Collection":             {template: {name: tmdb, id: 131295, mode: hide_items}}
   "Chili Palmer Collection":                {template: {name: tmdb, id: 91698}}
-  "The Chronicles of Riddick":              {template: {name: tmdb, id: 2794}}
   "Clint Eastwood's Iwo Jima Collection":   {template: {name: tmdb, id: 261382}}
   "Conan the Barbarian Collection":         {template: {name: tmdb, id: 43055, mode: hide_items}}
   "The Dark Knight Trilogy":                {template: {name: tmdb, id: 263}}
   "Deadpool Collection":                    {template: {name: tmdb, id: 448150, mode: hide_items}}
   "Die Hard Collection":                    {template: {name: tmdb, id: 1570}}
   "Dirty Harry Collection":                 {template: {name: tmdb, id: 10456}}
+  "Evil Dead Collection":                   {template: {name: tmdb, id: 1960}}
   "The Expendables Collection":             {template: {name: tmdb, id: 126125, mode: hide_items}}
   "Fast & Furious Collection":              {template: {name: tmdb, id: 9485, mode: hide_items}}
+  "Ghostbusters Collection":                {template: {name: tmdb, id: 2980, mode: hide_items}}
   "The Godfather Trilogy":                  {template: {name: tmdb, id: 230}}
   "Gremlins Collection":                    {template: {name: tmdb, id: 89151, mode: hide_items}}
-  "Hannibal Lecter Collection":             {template: {name: tmdb, id: 9743}}
+  "Halloween Collection":                   {template: {name: tmdb, id: 91361, mode: hide_items}}
   "Harry Potter Collection":                {template: {name: tmdb, id: 1241, mode: hide_items}}
   "Horizon: An American Saga":              {template: {name: tmdb, id: 1126640, mode: hide_items}}
   "Home Alone Collection":                  {template: {name: tmdb, id: 9888}}
   "Indiana Jones Collection":               {template: {name: tmdb, id: 84, mode: hide_items}}
   "Ip Man Collection":                      {template: {name: tmdb, id: 70068, mode: hide_items}}
   "Iron Man Collection":                    {template: {name: tmdb, id: 131292, mode: hide_items}}
+  "Jaws Collection":                        {template: {name: tmdb, id: 2366, mode: hide_items}}
+  "Jesse Stone Collection":                 {template: {name: tmdb, id: 59235, mode: hide_items}}
   "John Wick Collection":                   {template: {name: tmdb, id: 404609, mode: hide_items}}
   "Jump Street Collection":                 {template: {name: tmdb, id: 212562}}
   "Jurassic Park Collection":               {template: {name: tmdb, id: 328}}
   "Kingsman Collection":                    {template: {name: tmdb, id: 391860, mode: hide_items}}
   "Knocked Up Collection":                  {template: {name: tmdb, id: 779062}}
+  "Living Dead Collection":                 {template: {name: tmdb, id: 261590}}
   "Mad Max Collection":                     {template: {name: tmdb, id: 8945}}
   "The Matrix Collection":                  {template: {name: tmdb, id: 2344, mode: hide_items}}
   "Men in Black Collection":                {template: {name: tmdb, id: 86055, mode: hide_items}}
@@ -48,10 +53,11 @@ collections:
   "Ocean's Trilogy":                        {template: {name: tmdb, id: 304, mode: hide_items}}
   "Pirates of the Caribbean Collection":    {template: {name: tmdb, id: 295, mode: hide_items}}
   "Rambo Collection":                       {template: {name: tmdb, id: 5039, mode: hide_items}}
+  "Riddick Collection":                     {template: {name: tmdb, id: 2794}}
   "RoboCop Collection":                     {template: {name: tmdb, id: 5547, mode: hide_items}}
   "Sanjuro Collection":                     {template: {name: tmdb, id: 627389}}
+  "Shrek Collection":                       {template: {name: tmdb, id: 2150, mode: hide_items}}
   "The Scorpion King Collection":           {template: {name: tmdb, id: 116669, mode: hide_items}}
-  "Smile Collection":                       {template: {name: tmdb, id: 1100788, mode: hide_items}}
   "Taken Collection":                       {template: {name: tmdb, id: 135483, mode: hide_items}}
   "The Terminator Collection":              {template: {name: tmdb, id: 528}}
   "Thor Collection":                        {template: {name: tmdb, id: 131296, mode: hide_items}}
@@ -68,7 +74,9 @@ collections:
 
   # Trakt
   "Alien Collection":              {template: {name: trakt, user: barffy194, list: aliens}}
+  "Friday the 13th Collection":    {template: {name: trakt, user: arachn0id, list: friday-the-13th, mode: hide_items}}
   "Godzilla Collection":           {template: {name: trakt, user: -ryo-, list: godzilla}}
+  "Hannibal Lecter Collection":    {template: {name: trakt, user: bobbyplaysgames, list: hannibal-lecter}}
   "Kill Bill Collection":          {template: {name: trakt, user: kidbiz20, list: kill-bill-collection, mode: hide_items}}
   "King Kong Collection":          {template: {name: trakt, user: rzepkowski, list: king-kong-movies}}
   "LEGO Collection":               {template: {name: trakt, user: conanrocks, list: movies-lego-movie, mode: hide_items}}
@@ -79,6 +87,7 @@ collections:
   "Planet of the Apes Collection": {template: {name: trakt, user: bruinschris, list: planet-of-the-apes}}
   "Predator Collection":           {template: {name: trakt, user: digitmaxr, list: predator}}
   "Rocky Collection":              {template: {name: trakt, user: elieser49ers, list: rocky-franchise, mode: hide_items}}
+  "Superman Collection":           {template: {name: trakt, user: pterisaur, list: superman-24271746}}
   "Spider-Man Collection":         {template: {name: trakt, user: pterisaur, list: spider-man-24253784, mode: hide_items}}
   "Three Flavours Cornetto":       {template: {name: trakt, user: rzepkowski, list: three-flavours-cornetto-movies}}
   "Unbreakable Collection":        {template: {name: trakt, user: malvado, list: unbreakable}}

@@ -2,7 +2,7 @@ templates:
   preroll:
     default:
       ext: mp4
-    server_preroll: /prerolls/<<collection_name>>.<<ext>>
+    server_preroll: /library/prerolls/<<collection_name>>.<<ext>>
     build_collection: false
     schedule: <<schedule>>
 

@@ -1,62 +1,64 @@
 external_templates:
+- file: config/collections/templates.yaml
 - file: config/collections/genres/templates.yaml
 
+# Foreign
+
 collections:
-  Airplanes:         {template: {name: subgenre, tmdb_keyword: [airplane, plane]}}
-  Aliens:            {template: {name: subgenre, tmdb_keyword: [alien, aliens, alien contact]}}
+  "Genre Collections":
+    template: {name: separator}
+
+  Airplanes:         {template: {name: subgenre, tmdb_keyword: [airplane, plane, flight]}}
+  Aliens:            {template: {name: subgenre, tmdb_keyword: [alien, aliens, alien contact, alien invasion]}}
   America:           {template: {name: subgenre, tmdb_keyword: [america, american, american frontier, american revolution, revolutionary war, usa, apollo program]}}
-  Animals:           {template: {name: subgenre, tmdb_keyword: [animal, animals]}}
+  Animals:           {template: {name: subgenre, tmdb_keyword: [animal, animals, ape, fish, shark, lion, rat, wolf, zoo, horse]}}
   Apocalypse:        {template: {name: subgenre, tmdb_keyword: [apocalypse, apocalyptic]}}
   Assassin:          {template: {name: subgenre, tmdb_keyword: [assassin, assassination, hitman]}}
   Black & White:     {template: {name: subgenre, tmdb_keyword: [black and white]}}
   Boats:             {template: {name: subgenre, tmdb_keyword: [boat, ship, ships, canoe, submarine]}}
-  Cars:              {template: {name: subgenre, tmdb_keyword: [cars, car race, racing, car mechanic, getaway driver]}}
+  Cars:              {template: {name: subgenre, tmdb_keyword: [cars, car race, racing, driving, car mechanic, car driver, getaway driver, truck]}}
   Christmas:         {template: {name: subgenre, tmdb_keyword: [christmas]}}
   Comic Book:        {template: {name: subgenre, tmdb_keyword: [comic book, comic, based on comic, marvel cinematic universe (mcu), dc extended universe (dceu)]}}
   Cold War:          {template: {name: subgenre, tmdb_keyword: [cold war]}}
   Cyberpunk:         {template: {name: subgenre, tmdb_keyword: [cyberpunk]}}
-  Disaster:          {template: {name: subgenre, tmdb_keyword: [disaster, natural disaster]}}
+  Disaster:          {template: {name: subgenre, tmdb_keyword: [disaster, natural disaster, human made disaster, nuclear catastrophe]}}
   Dragons:           {template: {name: subgenre, tmdb_keyword: [dragon, dragons]}}
   Drugs:             {template: {name: subgenre, tmdb_keyword: [drugs, drug dealer]}}
   Dystopian:         {template: {name: subgenre, tmdb_keyword: [dystopian, dystopia]}}
   Epic:              {template: {name: subgenre, tmdb_keyword: [epic]}}
   Future:            {template: {name: subgenre, tmdb_keyword: [future, futuristic]}}
   Gambling:          {template: {name: subgenre, tmdb_keyword: [gambling]}}
-  Halloween:         {template: {name: subgenre, tmdb_keyword: [halloween]}}
+  Gangster:          {template: {name: subgenre, tmdb_keyword: [gangster, gangsters, gang, mafia, mob]}}
+  Halloween:         {template: {name: subgenre, tmdb_keyword: [ghost, ghosts, ghoul]}}
+  Ghost:             {template: {name: subgenre, tmdb_keyword: [halloween]}}
   Heist:             {template: {name: subgenre, tmdb_keyword: [heist]}}
-  High Fantasy:      {template: {name: subgenre, tmdb_keyword: [high fantasy]}}
   Kung Fu:           {template: {name: subgenre, tmdb_keyword: [kung fu, ronin, samurai]}}
-  Mafia:             {template: {name: subgenre, tmdb_keyword: [mafia, mob, gang, gangster, gangsters]}}
   Magic:             {template: {name: subgenre, tmdb_keyword: [magic, magical]}}
-  Monster:           {template: {name: subgenre, tmdb_keyword: [monster, monsters]}}
+  Monster:           {template: {name: subgenre, tmdb_keyword: [monster, monsters, mummy, vampire]}}
   Nature:            {template: {name: subgenre, tmdb_keyword: [nature, nature documentary, outdoors, outdoorsman, wilderness]}}
   Murder:            {template: {name: subgenre, tmdb_keyword: [murder, serial killer]}}
-  Ninja:             {template: {name: subgenre, tmdb_keyword: [ninja]}}
   Neo-Noir:          {template: {name: subgenre, tmdb_keyword: [neo-noir]}}
   Neo-Western:       {template: {name: subgenre, tmdb_keyword: [neo-western]}}
   Outer Space:       {template: {name: subgenre, tmdb_keyword: [outer space, space, space sci fi, space travel, spaceship]}}
   Pirates:           {template: {name: subgenre, tmdb_keyword: [pirate, pirates]}}
-  Parody:            {template: {name: subgenre, tmdb_keyword: [parody, satire]}}
-  Police:            {template: {name: subgenre, tmdb_keyword: [police, cop, cops]}}
+  Police:            {template: {name: subgenre, tmdb_keyword: [police, police officer, cop, cops]}}
   Politics:          {template: {name: subgenre, tmdb_keyword: [politics, political]}}
   Post-Apocalyptic:  {template: {name: subgenre, tmdb_keyword: [post-apocalyptic, post-apocalyptic future]}}
   Prison:            {template: {name: subgenre, tmdb_keyword: [prison, prisoner, jail]}}
   Psychological:     {template: {name: subgenre, tmdb_keyword: [psychological, psychological thriller]}}
   Religion:          {template: {name: subgenre, tmdb_keyword: [religion, bible]}}
   Revenge:           {template: {name: subgenre, tmdb_keyword: [revenge]}}
-  Robots:            {template: {name: subgenre, tmdb_keyword: [robot, robots, android]}}
-  Romantic Comedy:   {template: {name: subgenre, tmdb_keyword: [romantic comedy]}}
+  Robots:            {template: {name: subgenre, tmdb_keyword: [robot, robots, android, cyborg]}}
+  Satire:            {template: {name: subgenre, tmdb_keyword: [satire, parody]}}
   Slasher:           {template: {name: subgenre, tmdb_keyword: [slasher]}}
   Space Opera:       {template: {name: subgenre, tmdb_keyword: [space opera]}}
-  Spaghetti Western: {template: {name: subgenre, tmdb_keyword: [spaghetti western]}}
   Spy:               {template: {name: subgenre, tmdb_keyword: [spy, espionage]}}
   Superhero:         {template: {name: subgenre, tmdb_keyword: [superhero]}}
-  Sword & Sorcery:   {template: {name: subgenre, tmdb_keyword: [sword and sorcery]}}
   Teen:              {template: {name: subgenre, tmdb_keyword: [teen drama, high school, coming of age]}}
-  Trains:            {template: {name: subgenre, tmdb_keyword: [train, trains]}}
-  Vampire:           {template: {name: subgenre, tmdb_keyword: [vampire]}}
+  Trains:            {template: {name: subgenre, tmdb_keyword: [train, trains, railroad]}}
+  Vampires:          {template: {name: subgenre, tmdb_keyword: [vampire]}}
   Vietnam War:       {template: {name: subgenre, tmdb_keyword: [vietnam war]}}
-  War on Terror:     {template: {name: subgenre, tmdb_keyword: [war on terror, iraq war, afghanistan, taliban, 9/11]}}
+  War on Terror:     {template: {name: subgenre, tmdb_keyword: [war on terror, iraq war, afghanistan, taliban, al qaeda, 9/11]}}
   World War I:       {template: {name: subgenre, tmdb_keyword: [world war i]}}
   World War II:      {template: {name: subgenre, tmdb_keyword: [world war ii]}}
   Zombies:           {template: {name: subgenre, tmdb_keyword: [zombie]}}

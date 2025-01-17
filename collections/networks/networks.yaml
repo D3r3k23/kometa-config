@@ -1,3 +1,6 @@
+external_templates:
+- file: config/collections/templates.yaml
+
 templates:
   network:
     default:
@@ -10,22 +13,83 @@ templates:
     minimum_items: 2
     plex_search:
       any:
-        network.is: <<network>>
+        network: <<network>>
       validate: false
 
 collections:
-  "Adult Swim":  {template: {name: network, network: [Adult Swim]}}
-  "AMC+":        {template: {name: network, network: [AMC, AMC+]}}
-  "Apple TV+":   {template: {name: network, network: [Apple TV+]}}
-  "BBC":         {template: {name: network, network: [BBC One, BBC Two]}}
-  "Disney+":     {template: {name: network, network: [Disney+]}}
-  "FOX":         {template: {name: network, network: [FOX, FX, FXX]}}
-  "HBO":         {template: {name: network, network: [HBO]}}
-  "History":     {template: {name: network, network: [History]}}
-  "Hulu":        {template: {name: network, network: [Hulu]}}
-  "Netflix":     {template: {name: network, network: [Netflix]}}
-  "Paramount+":  {template: {name: network, network: [Paramount+, Paramount Network, Paramount Pictures]}}
-  "Prime Video": {template: {name: network, network: [Prime Video]}}
-  "Showtime":    {template: {name: network, network: [Showtime]}}
-  "Syfy":        {template: {name: network, network: [Syfy]}}
-  "USA":         {template: {name: network, network: [USA Network]}}
+  "Network Collections":
+    template: {name: separator}
+
+  "Adult Swim":
+    template:
+    - {name: network, network: [Adult Swim]}
+
+  "AMC":
+    template:
+    - {name: network, network: [AMC, AMC+]}
+
+  "Apple TV+":
+    template:
+    - {name: network, network: [Apple TV+]}
+    - {name: visible, library: true, home: true, shared: true}
+
+  "BBC":
+    template:
+    - {name: network, network: [BBC One, BBC Two, BBC Three, BBC Four]}
+
+  "Disney+":
+    template:
+    - {name: network, network: [Disney+]}
+    - {name: visible, library: true, home: true, shared: true}
+
+  "FOX":
+    template:
+    - {name: network, network: [FOX, FX, FXX, Fox Nation]}
+
+  "HBO":
+    template:
+    - {name: network, network: [HBO]}
+    - {name: visible, library: true, home: true, shared: true}
+
+  "History":
+    template:
+    - {name: network, network: [History]}
+
+  "Hulu":
+    template:
+    - {name: network, network: [Hulu]}
+
+  "Nickelodeon":
+    template:
+    - {name: network, network: [Nickelodeon]}
+
+  "Netflix":
+    template:
+    - {name: network, network: [Netflix]}
+    - {name: visible, library: true, home: true, shared: true}
+
+  "Paramount+":
+    template:
+    - {name: network, network: [Paramount+, Paramount+ with Showtime, Paramount Network, Paramount Pictures]}
+    - {name: visible, library: true, home: true, shared: true}
+
+  "PBS":
+    template:
+    - {name: network, network: [PBS]}
+
+  "Prime Video":
+    template:
+    - {name: network, network: [Prime Video]}
+    - {name: visible, library: true, home: true, shared: true}
+
+  "Showtime":
+    template:
+    - {name: network, network: [Showtime]}
+
+  "Syfy":
+    template:
+    - {name: network, network: [Syfy]}
+
+  "USA":
+    template:
+    - {name: network, network: [USA Network]}

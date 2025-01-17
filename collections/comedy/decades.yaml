@@ -1,0 +1,22 @@
+templates:
+  decade:
+    default:
+      section: '00'
+    sort_title: '!<<section>>-Decades <<collection_sort>>'
+    collection_order: audience_rating.desc
+    collection_mode: hide
+    plex_search:
+      limit: 20
+      all:
+        decade: <<value>>
+        audience_rating.gt: 7.0
+    visible_library: true
+    visible_home: true
+    visible_shared: true
+
+dynamic_collections:
+  Comedy Decades:
+    type: decade
+    template: decade
+    title_format: 'Best <<key_name>> Comedy Specials'
+    sync: true

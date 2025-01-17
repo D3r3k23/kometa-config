@@ -3,12 +3,3 @@ external_templates:
 - file: config/collections/templates.yaml
 
 collections:
-  "Top Rated Episodes":
-    template:
-    - {name: chart, sort_prefix: '01'}
-    - {name: visible, library: true, home: true, shared: true}
-    plex_search:
-      limit: 50
-      all: {audience_rating.gte: 7.0}
-    collection_order: audience_rating.desc
-    builder_level: episode
