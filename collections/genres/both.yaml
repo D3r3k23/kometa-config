@@ -1,6 +1,6 @@
 external_templates:
-- file: config/collections/templates.yaml
-- file: config/collections/genres/templates.yaml
+- file: /library/kometa/collections/templates.yaml
+- file: /library/kometa/collections/genres/templates.yaml
 
 # Foreign
 

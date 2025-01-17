@@ -1,6 +1,6 @@
 external_templates:
-- file: config/collections/templates.yaml
-- file: config/collections/people/templates.yaml
+- file: /library/kometa/collections/templates.yaml
+- file: /library/kometa/collections/people/templates.yaml
 
 collections:
   "People Collections":

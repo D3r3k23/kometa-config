@@ -1,6 +1,6 @@
 external_templates:
-- file: config/collections/basic/templates.yaml
-- file: config/collections/templates.yaml
+- file: /library/kometa/collections/basic/templates.yaml
+- file: /library/kometa/collections/templates.yaml
 
 collections:
   "Recently Added":

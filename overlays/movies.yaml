@@ -1,5 +1,5 @@
 external_templates:
-  file: config/overlays/templates.yaml
+  file: /library/kometa/overlays/templates.yaml
 
 overlays:
   "Movie Backdrop":

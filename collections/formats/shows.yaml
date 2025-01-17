@@ -1,5 +1,5 @@
 external_templates:
-- file: config/collections/formats/templates.yaml
-- file: config/collections/templates.yaml
+- file: /library/kometa/collections/formats/templates.yaml
+- file: /library/kometa/collections/templates.yaml
 
 collections:

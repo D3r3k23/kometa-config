@@ -1,6 +1,6 @@
 external_templates:
-- file: config/collections/charts/templates.yaml
-- file: config/collections/templates.yaml
+- file: /library/kometa/collections/charts/templates.yaml
+- file: /library/kometa/collections/templates.yaml
 
 collections:
   "Letterboxd Top 250":
