@@ -55,7 +55,8 @@ libraries:
     - {template_variables: {section: '09'}, asset_directory: /library/images/collections/people, file: /library/kometa/collections/people/both.yaml}
     # - {asset_directory: /library/collections, file: /library/kometa/collections/collectionless.yaml}
 
-    metadata_files: /library/metadata/movies.yaml
+    metadata_files:
+    - {folder: /library/metadata/movies}
     overlay_files:
     - {file: /library/kometa/overlays/movies.yaml}
     - {file: /library/kometa/overlays/both.yaml}
@@ -107,7 +108,8 @@ libraries:
     - {template_variables: {section: '09'}, asset_directory: /library/images/collections/people, file: /library/kometa/collections/people/both.yaml}
     # - {asset_directory: /library/collections, file: /library/kometa/collections/collectionless.yaml}
 
-    metadata_files: /library/metadata/shows.yaml
+    metadata_files:
+    - {folder: /library/metadata/shows}
     overlay_files:
     - {file: /library/kometa/overlays/shows.yaml}
     - {file: /library/kometa/overlays/both.yaml}
